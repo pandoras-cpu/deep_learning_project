@@ -1,0 +1,23 @@
+{
+  "generator_config": "configs/baseline_v2.yaml",
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "prompt_version": "evidence-only-v2",
+  "retrieved_input": "results/baseline_dev_retrieved.jsonl",
+  "retrieval_recomputed": false,
+  "answers": "results/baseline_v2/answers.jsonl",
+  "aspects": "results/baseline_v2/aspects.jsonl",
+  "answer_count": 30,
+  "evaluator_version": "baseline-eval-v2",
+  "evaluation_config": "configs/evaluation_v2.yaml",
+  "git_commit": null,
+  "file_sha256": {
+    "configs/baseline_v2.yaml": "4fce90f45bb30d485edb128e7b471f26888279ffaa81a403afc327f81d86a1b9",
+    "configs/evaluation_v2.yaml": "fd5dfbf12230415e215c41958741a8cbae2a52c1e5ca39d5ed80cdceb17ce9f8",
+    "src/evaluation/prompts.py": "d942ca8f2ae0383eecc21e57b62a9aaf62618c522f711d46240f44e376f29dd9",
+    "src/evaluation/metrics.py": "7c18934920f5b93b7b0dd8475c4731967eb27dba60a263e89dd2d3cc4be7fcd1",
+    "src/evaluation/nli_verifier.py": "512f28a42a86d5f2b0b1b3502262dcd296309801dbc122742f75f4d49f695c92",
+    "scripts/run_baseline_v2.py": "e4487ce14c1a0c2dafb164d36788d7357461d282019581a2e9005ac01f10b9ca",
+    "scripts/run_evaluation_v2.py": "5d3a9ea1c54fdfd90ae6cfd34f0ce08c16635c912365c743b6ac2484f80cb37d"
+  }
+}

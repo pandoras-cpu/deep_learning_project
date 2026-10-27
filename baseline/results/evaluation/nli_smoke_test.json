@@ -1,0 +1,99 @@
+{
+  "model_id": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
+  "revision": "6f5cf0a2b59cabb106aca4c287eed12e357e90eb",
+  "device": "cpu",
+  "id2label": {
+    "0": "entailment",
+    "1": "neutral",
+    "2": "contradiction"
+  },
+  "load_seconds": 0.819,
+  "max_rss_mb": 690.6,
+  "decision": "argmax",
+  "judge": "extract_answer_claims is not available: no independent LLM judge is configured. Do not call the generator and do not reuse the preliminary coverage counts.",
+  "tests": [
+    {
+      "name": "supported_4k",
+      "claim": "The camera supports 4K recording.",
+      "status": "supported",
+      "nli_label": "entailment",
+      "scores": {
+        "entailment": 0.9971,
+        "neutral": 0.0024,
+        "contradiction": 0.0004
+      },
+      "truncated": false,
+      "max_probability": 0.9971
+    },
+    {
+      "name": "missing_waterproof",
+      "claim": "The camera is waterproof.",
+      "status": "unsupported",
+      "nli_label": "neutral",
+      "scores": {
+        "entailment": 0.0004,
+        "neutral": 0.9902,
+        "contradiction": 0.0094
+      },
+      "truncated": false,
+      "max_probability": 0.9902
+    },
+    {
+      "name": "negated_4k",
+      "claim": "The camera does not support 4K recording.",
+      "status": "contradicted",
+      "nli_label": "contradiction",
+      "scores": {
+        "entailment": 0.0006,
+        "neutral": 0.0005,
+        "contradiction": 0.999
+      },
+      "truncated": false,
+      "max_probability": 0.999
+    },
+    {
+      "name": "two_atomic_claims",
+      "answer": "The camera supports 4K recording and is waterproof.",
+      "split_by": "smoke_test_manual_not_llm",
+      "claims": [
+        {
+          "name": "supports_4k",
+          "claim": "The camera supports 4K recording.",
+          "status": "supported",
+          "nli_label": "entailment",
+          "scores": {
+            "entailment": 0.9971,
+            "neutral": 0.0024,
+            "contradiction": 0.0004
+          },
+          "truncated": false,
+          "max_probability": 0.9971
+        },
+        {
+          "name": "waterproof",
+          "claim": "The camera is waterproof.",
+          "status": "unsupported",
+          "nli_label": "neutral",
+          "scores": {
+            "entailment": 0.0004,
+            "neutral": 0.9902,
+            "contradiction": 0.0094
+          },
+          "truncated": false,
+          "max_probability": 0.9902
+        }
+      ]
+    },
+    {
+      "name": "abstention_about_waterproofing",
+      "claim": "The evidence does not specify waterproofing.",
+      "status": "not_a_factual_claim",
+      "nli_label": null,
+      "scores": null,
+      "truncated": false,
+      "max_probability": null,
+      "note": "Meta-statement about missing evidence. Not sent to NLI and not counted as a product claim."
+    }
+  ],
+  "failures": []
+}

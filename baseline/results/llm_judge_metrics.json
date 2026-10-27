@@ -1,0 +1,37 @@
+{
+  "judge": "assistant LLM, not the Qwen generator and not a human annotator",
+  "metrics": {
+    "rag": {
+      "ucr": 0.1458,
+      "supported": 41,
+      "unsupported": 7,
+      "uncertain_excluded": 0,
+      "nonclaim_excluded": 24,
+      "answers_with_factual_claims": 19,
+      "answers_without_factual_claims": 11,
+      "abstention_appropriate": 16,
+      "abstention_inappropriate": 4,
+      "answerable_coverage": 0.3684,
+      "facts_expressed": 14,
+      "facts_required": 38,
+      "questions_with_answerable_facts": 22,
+      "questions_without_answerable_facts": 8
+    },
+    "gold": {
+      "ucr": 0.1395,
+      "supported": 37,
+      "unsupported": 6,
+      "uncertain_excluded": 1,
+      "nonclaim_excluded": 13,
+      "answers_with_factual_claims": 17,
+      "answers_without_factual_claims": 13,
+      "abstention_appropriate": 9,
+      "abstention_inappropriate": 4,
+      "answerable_coverage": 0.6316,
+      "facts_expressed": 24,
+      "facts_required": 38,
+      "questions_with_answerable_facts": 22,
+      "questions_without_answerable_facts": 8
+    }
+  }
+}

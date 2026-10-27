@@ -1,0 +1,107 @@
+# Frozen evaluation manifest. Does not change the baseline generator or retriever.
+# The judge is Qwen2.5-3B-Instruct, a different checkpoint from the Qwen3 generator.
+
+baseline_config: configs/baseline.yaml
+sample_path: data/eval/baseline_dev_sample.json
+sample_seed: 42
+sample_size: 30
+split: dev
+sampling: random.Random(42).sample(sorted unique dev qids, 30)
+sampling_uses_labels: false
+
+generator:
+  model_id: Qwen/Qwen3-4B-Instruct-2507
+  revision: cdbee75f17c01a7cc42f958dc650907174af0554
+  prompt_version: evidence-only-v1
+  torch_dtype: float16
+  device: mps
+  max_input_tokens: 2048
+  decoding:
+    do_sample: false
+    max_new_tokens: 256
+
+retriever:
+  model_id: BAAI/bge-small-en-v1.5
+  revision: 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a
+  query_prefix: "Represent this sentence for searching relevant passages: "
+  pooling: cls
+  normalize: true
+  similarity: inner_product
+  max_length: 512
+  top_k: 3
+  search: within_question_candidate_pool
+  index: indexes/dev
+
+conditions:
+  standard_rag:
+    name: standard_top3
+    existing_output: results/baseline_dev.jsonl
+    evidence: retrieved top 3 within the question pool
+  gold_evidence_qa:
+    name: gold_evidence_qa
+    existing_output: results/gold_evidence_dev.jsonl
+    evidence: all nonempty label=2 candidates, used only to select evidence
+    not_an_upper_bound: true
+
+nli:
+  status: downloaded
+  primary_model_id: MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli
+  revision: 6f5cf0a2b59cabb106aca4c287eed12e357e90eb
+  local_dir: models/eval_nli_deberta
+  device: cpu
+  decision: argmax
+  low_confidence_below: 0.5
+  premise: supplied evidence
+  hypothesis: atomic generated claim
+  role: pragmatic NLI substitute, not AGREE TRUE-NLI
+
+llm_judge:
+  status: configured
+  provider: local_transformers
+  model_id: Qwen/Qwen2.5-3B-Instruct
+  revision: aa8e72537993ba99e69dfaafa59ed015b17504d1
+  cache_dir: models/hf
+  same_model_judge: false
+  same_family_as_generator: true
+  torch_dtype: float16
+  device: mps
+  load: cpu_float16_then_mps
+  temperature: 0
+  low_confidence_below: 0.5
+  decoding:
+    do_sample: false
+    max_new_tokens: 512
+  prompt_versions:
+    claim: claim-extraction-v2
+    facts: supported-facts-v2
+    match: fact-match-v2
+  nli_aggregation: supported only when a passage entails and no passage contradicts; disagreement is uncertain
+  sufficiency: not_enabled
+  pilot_example_ids: [baseline-01, baseline-02, baseline-03, baseline-04, baseline-05]
+
+metrics:
+  ucr_primary: unsupported / (supported + unsupported)
+  ucr_scopes: [micro, macro]
+  ucr_undefined_when: answer has no confidently classified factual claim
+  uncertain_reported_separately: true
+  conservative_ucr: uncertain factual claims counted as unsupported
+  coverage_evidence_conditional: facts supported by the evidence actually shown to that condition
+  coverage_common_reference: one fact list per question from all nonempty label=2 evidence
+  coverage_undefined_when: the chosen fact list is empty
+  retrieval_existing: [Recall@K, Success@K, MRR, nDCG@K]
+  retrieval_k_planned: [1, 3, 5]
+  ndcg_gain: 2^label - 1
+  preliminary_38_fact_denominator: do_not_reuse
+
+packages:
+  python: 3.13.5
+  pandas: 3.1.0
+  numpy: 2.5.4
+  torch: 2.14.1
+  transformers: 5.20.2
+  huggingface_hub: 2.3.0
+  safetensors: 0.8.0
+  pyyaml: 6.0.3
+  faiss-cpu: 1.15.1
+  sentencepiece: not_installed
+  sentence_transformers: not_installed

@@ -1,0 +1,906 @@
+[
+  {
+    "example_id": "baseline-01",
+    "condition": "standard_top3",
+    "before_claims": [
+      {
+        "claim": "You can custom crop your photos by putting on multiple photos and cropping them to different shapes.",
+        "kind": "factual",
+        "nli_status": "supported"
+      },
+      {
+        "claim": "This is supported by the evidence provided.",
+        "kind": "not_a_factual_claim",
+        "nli_status": null
+      }
+    ],
+    "after_claims": [
+      {
+        "claim": "You can custom crop your photos by putting on multiple photos and cropping them to different shapes.",
+        "kind": "factual",
+        "nli_status": "uncertain",
+        "decision_reason": "passage_disagreement"
+      },
+      {
+        "claim": "This is not a factual claim.",
+        "kind": "not_a_factual_claim",
+        "nli_status": null,
+        "decision_reason": null
+      }
+    ],
+    "before_facts": [],
+    "after_facts": [],
+    "before_ucr": {
+      "supported": 1,
+      "unsupported": 0,
+      "contradicted": 0,
+      "uncertain": 0,
+      "ucr": 0.0,
+      "ucr_conservative": 0.0,
+      "undefined": false,
+      "undefined_reason": null
+    },
+    "after_ucr": {
+      "supported": 0,
+      "unsupported": 0,
+      "contradicted": 0,
+      "uncertain": 1,
+      "evaluation_error": 0,
+      "ucr": null,
+      "ucr_conservative": 1.0,
+      "undefined": true,
+      "undefined_reason": "only_uncertain"
+    },
+    "before_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "undefined": true,
+      "undefined_reason": "no_required_facts",
+      "evidence_ids": [
+        "dev:6972",
+        "dev:6974",
+        "dev:6975"
+      ]
+    },
+    "after_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "undefined": true,
+      "undefined_reason": "no_required_facts",
+      "evidence_ids": [
+        "dev:6972",
+        "dev:6974",
+        "dev:6975"
+      ],
+      "verified_facts": 0,
+      "fact_status_counts": {
+        "verified": 0,
+        "unsupported_by_citation": 0,
+        "contradicted_by_citation": 0,
+        "uncertain": 0,
+        "evaluation_error": 0
+      }
+    }
+  },
+  {
+    "example_id": "baseline-01",
+    "condition": "gold_evidence_qa",
+    "before_claims": [
+      {
+        "claim": "How to custom crop is not stated in the evidence.",
+        "kind": "not_a_factual_claim",
+        "nli_status": null
+      }
+    ],
+    "after_claims": [
+      {
+        "claim": "How to custom crop is not stated in the evidence.",
+        "kind": "not_a_factual_claim",
+        "nli_status": null,
+        "decision_reason": null
+      }
+    ],
+    "before_facts": [],
+    "after_facts": [],
+    "before_ucr": {
+      "supported": 0,
+      "unsupported": 0,
+      "contradicted": 0,
+      "uncertain": 0,
+      "ucr": null,
+      "ucr_conservative": null,
+      "undefined": true,
+      "undefined_reason": "no_factual_claim"
+    },
+    "after_ucr": {
+      "supported": 0,
+      "unsupported": 0,
+      "contradicted": 0,
+      "uncertain": 0,
+      "evaluation_error": 0,
+      "ucr": null,
+      "ucr_conservative": null,
+      "undefined": true,
+      "undefined_reason": "no_factual_claim"
+    },
+    "before_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "undefined": true,
+      "undefined_reason": "no_required_facts",
+      "evidence_ids": [
+        "dev:6973"
+      ]
+    },
+    "after_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "undefined": true,
+      "undefined_reason": "no_required_facts",
+      "evidence_ids": [
+        "dev:6973"
+      ],
+      "verified_facts": 0,
+      "fact_status_counts": {
+        "verified": 0,
+        "unsupported_by_citation": 0,
+        "contradicted_by_citation": 0,
+        "uncertain": 0,
+        "evaluation_error": 0
+      }
+    }
+  },
+  {
+    "example_id": "baseline-02",
+    "condition": "standard_top3",
+    "before_claims": [
+      {
+        "claim": "The medium size is listed as being for small dogs weighing less than 20 pounds.",
+        "kind": "factual",
+        "nli_status": "supported"
+      },
+      {
+        "claim": "A 25-pound Boston terrier exceeds the weight limit for the medium size.",
+        "kind": "factual",
+        "nli_status": "unsupported"
+      },
+      {
+        "claim": "It is recommended to order the large size due to the dog's weight.",
+        "kind": "factual",
+        "nli_status": "supported"
+      }
+    ],
+    "after_claims": [
+      {
+        "claim": "The medium size is for small dogs under 20 lbs max.",
+        "kind": "factual",
+        "nli_status": "uncertain",
+        "decision_reason": "passage_disagreement"
+      },
+      {
+        "claim": "A 25 lb Boston terrier exceeds the 20 lbs max for the medium size.",
+        "kind": "factual",
+        "nli_status": "contradicted",
+        "decision_reason": "passage_contradiction"
+      },
+      {
+        "claim": "The large size should be ordered.",
+        "kind": "factual",
+        "nli_status": "contradicted",
+        "decision_reason": "passage_contradiction"
+      }
+    ],
+    "before_facts": [
+      {
+        "fact": "The medium size is really for small dogs under 20 lbs max.",
+        "evidence_id": "dev:2053",
+        "quote": "the medium size is really for small dogs under 20 lbs max."
+      }
+    ],
+    "after_facts": [
+      {
+        "fact": "The medium size is really for small dogs under 20 lbs max.",
+        "alignment_status": "aligned",
+        "fact_status": "verified",
+        "fact_reason": "supported",
+        "aligned_span": "the medium size is really for small dogs under 20 lbs max."
+      }
+    ],
+    "before_ucr": {
+      "supported": 2,
+      "unsupported": 1,
+      "contradicted": 0,
+      "uncertain": 0,
+      "ucr": 0.3333333333333333,
+      "ucr_conservative": 0.3333333333333333,
+      "undefined": false,
+      "undefined_reason": null
+    },
+    "after_ucr": {
+      "supported": 0,
+      "unsupported": 2,
+      "contradicted": 2,
+      "uncertain": 1,
+      "evaluation_error": 0,
+      "ucr": 1.0,
+      "ucr_conservative": 1.0,
+      "undefined": false,
+      "undefined_reason": null
+    },
+    "before_coverage": {
+      "numerator": 1,
+      "denominator": 1,
+      "coverage": 1.0,
+      "undefined": false,
+      "undefined_reason": null,
+      "evidence_ids": [
+        "dev:2055",
+        "dev:2052",
+        "dev:2053"
+      ]
+    },
+    "after_coverage": {
+      "numerator": 1,
+      "denominator": 1,
+      "coverage": 1.0,
+      "undefined": false,
+      "undefined_reason": null,
+      "evidence_ids": [
+        "dev:2055",
+        "dev:2052",
+        "dev:2053"
+      ],
+      "verified_facts": 1,
+      "fact_status_counts": {
+        "verified": 1,
+        "unsupported_by_citation": 0,
+        "contradicted_by_citation": 0,
+        "uncertain": 0,
+        "evaluation_error": 0
+      }
+    }
+  },
+  {
+    "example_id": "baseline-02",
+    "condition": "gold_evidence_qa",
+    "before_claims": [
+      {
+        "claim": "The medium size has interior dimensions of 18\" L x 13\" W x 3\" H and is suitable for pets up to 25 lbs.",
+        "kind": "factual",
+        "nli_status": "supported"
+      },
+      {
+        "claim": "A 25 lb Boston Terrier is within the weight limit for the medium size.",
+        "kind": "factual",
+        "nli_status": "unsupported"
+      },
+      {
+        "claim": "It is recommended to order the medium size.",
+        "kind": "not_a_factual_claim",
+        "nli_status": null
+      }
+    ],
+    "after_claims": [
+      {
+        "claim": "The medium size has interior dimensions of 18\" L x 13\" W x 3\" H and is suitable for pets up to 25 lbs.",
+        "kind": "factual",
+        "nli_status": "supported",
+        "decision_reason": "passage_entailment"
+      },
+      {
+        "claim": "A 25 lb Boston Terrier is within the weight limit of 25 lbs for the medium size.",
+        "kind": "factual",
+        "nli_status": "unsupported",
+        "decision_reason": "no_passage_entailment"
+      },
+      {
+        "claim": "It is recommended to order the medium size.",
+        "kind": "not_a_factual_claim",
+        "nli_status": null,
+        "decision_reason": null
+      }
+    ],
+    "before_facts": [],
+    "after_facts": [
+      {
+        "fact": "The medium size would be big enough for a 25lb Boston Terrier.",
+        "alignment_status": "aligned",
+        "fact_status": "unsupported_by_citation",
+        "fact_reason": "unsupported",
+        "aligned_span": "measures exterior : 22|\"l x 17|\"w x 11.5|\"h interior : 18|\"l x 13|\"w x 3|\"h for pets up to 25lbs"
+      }
+    ],
+    "before_ucr": {
+      "supported": 1,
+      "unsupported": 1,
+      "contradicted": 0,
+      "uncertain": 0,
+      "ucr": 0.5,
+      "ucr_conservative": 0.5,
+      "undefined": false,
+      "undefined_reason": null
+    },
+    "after_ucr": {
+      "supported": 1,
+      "unsupported": 1,
+      "contradicted": 0,
+      "uncertain": 0,
+      "evaluation_error": 0,
+      "ucr": 0.5,
+      "ucr_conservative": 0.5,
+      "undefined": false,
+      "undefined_reason": null
+    },
+    "before_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "undefined": true,
+      "undefined_reason": "no_required_facts",
+      "evidence_ids": [
+        "dev:2054"
+      ]
+    },
+    "after_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "undefined": true,
+      "undefined_reason": "no_verified_required_facts",
+      "evidence_ids": [
+        "dev:2054"
+      ],
+      "verified_facts": 0,
+      "fact_status_counts": {
+        "verified": 0,
+        "unsupported_by_citation": 1,
+        "contradicted_by_citation": 0,
+        "uncertain": 0,
+        "evaluation_error": 0
+      }
+    }
+  },
+  {
+    "example_id": "baseline-03",
+    "condition": "standard_top3",
+    "before_claims": [
+      {
+        "claim": "Whether flame retardants are used on or in the item is not stated.",
+        "kind": "not_a_factual_claim",
+        "nli_status": null
+      },
+      {
+        "claim": "The evidence mentions concerns about chemical fire retardants in polyurethane foam and a replacement with organic latex, but does not confirm the presence or absence of flame retardants in the specific item.",
+        "kind": "factual",
+        "nli_status": "supported"
+      }
+    ],
+    "after_claims": [
+      {
+        "claim": "The evidence is not stated regarding the use of flame retardants on or in the item.",
+        "kind": "not_a_factual_claim",
+        "nli_status": null,
+        "decision_reason": null
+      },
+      {
+        "claim": "Concerns are mentioned about chemical fire retardants in polyurethane foam and a replacement with organic latex.",
+        "kind": "factual",
+        "nli_status": "supported",
+        "decision_reason": "passage_entailment"
+      }
+    ],
+    "before_facts": [
+      {
+        "fact": "They do not use any type of flame retardants on or in this item.",
+        "evidence_id": "dev:1225",
+        "quote": "so i went ahead and replaced the foam with a piece of 2\" organic latex cut to the same size."
+      }
+    ],
+    "after_facts": [
+      {
+        "fact": "they use any type of flame retardants on or in this item.",
+        "alignment_status": "aligned",
+        "fact_status": "unsupported_by_citation",
+        "fact_reason": "unsupported",
+        "aligned_span": "i'm not a fan of the chemical fire retardants in polyurethane foam (and there wasn't anything that made me believe this foam was free of fire retardants)"
+      }
+    ],
+    "before_ucr": {
+      "supported": 1,
+      "unsupported": 0,
+      "contradicted": 0,
+      "uncertain": 0,
+      "ucr": 0.0,
+      "ucr_conservative": 0.0,
+      "undefined": false,
+      "undefined_reason": null
+    },
+    "after_ucr": {
+      "supported": 1,
+      "unsupported": 0,
+      "contradicted": 0,
+      "uncertain": 0,
+      "evaluation_error": 0,
+      "ucr": 0.0,
+      "ucr_conservative": 0.0,
+      "undefined": false,
+      "undefined_reason": null
+    },
+    "before_coverage": {
+      "numerator": 0,
+      "denominator": 1,
+      "coverage": 0.0,
+      "undefined": false,
+      "undefined_reason": null,
+      "evidence_ids": [
+        "dev:1225",
+        "dev:1223",
+        "dev:1224"
+      ]
+    },
+    "after_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "undefined": true,
+      "undefined_reason": "no_verified_required_facts",
+      "evidence_ids": [
+        "dev:1225",
+        "dev:1223",
+        "dev:1224"
+      ],
+      "verified_facts": 0,
+      "fact_status_counts": {
+        "verified": 0,
+        "unsupported_by_citation": 1,
+        "contradicted_by_citation": 0,
+        "uncertain": 0,
+        "evaluation_error": 0
+      }
+    }
+  },
+  {
+    "example_id": "baseline-03",
+    "condition": "gold_evidence_qa",
+    "before_claims": [
+      {
+        "claim": "They do not use any type of flame retardants on this item.",
+        "kind": "factual",
+        "nli_status": "supported"
+      },
+      {
+        "claim": "It is not stated if they use flame retardants on this item.",
+        "kind": "not_a_factual_claim",
+        "nli_status": null
+      }
+    ],
+    "after_claims": [
+      {
+        "claim": "They do not use any type of flame retardants on or in this item.",
+        "kind": "factual",
+        "nli_status": "supported",
+        "decision_reason": "passage_entailment"
+      },
+      {
+        "claim": "The evidence does not state they use flame retardants.",
+        "kind": "not_a_factual_claim",
+        "nli_status": null,
+        "decision_reason": null
+      }
+    ],
+    "before_facts": [
+      {
+        "fact": "They do not use any type of flame retardants on this item.",
+        "evidence_id": "dev:1222",
+        "quote": "baby bjorn doesn't use fire retardants on their products, something we absolutely wanted."
+      }
+    ],
+    "after_facts": [
+      {
+        "fact": "They do not use any type of flame retardants on or in this item.",
+        "alignment_status": "aligned",
+        "fact_status": "verified",
+        "fact_reason": "supported",
+        "aligned_span": "baby bjorn doesn't use fire retardants on their products, something we absolutely wanted."
+      }
+    ],
+    "before_ucr": {
+      "supported": 1,
+      "unsupported": 0,
+      "contradicted": 0,
+      "uncertain": 0,
+      "ucr": 0.0,
+      "ucr_conservative": 0.0,
+      "undefined": false,
+      "undefined_reason": null
+    },
+    "after_ucr": {
+      "supported": 1,
+      "unsupported": 0,
+      "contradicted": 0,
+      "uncertain": 0,
+      "evaluation_error": 0,
+      "ucr": 0.0,
+      "ucr_conservative": 0.0,
+      "undefined": false,
+      "undefined_reason": null
+    },
+    "before_coverage": {
+      "numerator": 1,
+      "denominator": 1,
+      "coverage": 1.0,
+      "undefined": false,
+      "undefined_reason": null,
+      "evidence_ids": [
+        "dev:1222",
+        "dev:1226"
+      ]
+    },
+    "after_coverage": {
+      "numerator": 1,
+      "denominator": 1,
+      "coverage": 1.0,
+      "undefined": false,
+      "undefined_reason": null,
+      "evidence_ids": [
+        "dev:1222",
+        "dev:1226"
+      ],
+      "verified_facts": 1,
+      "fact_status_counts": {
+        "verified": 1,
+        "unsupported_by_citation": 0,
+        "contradicted_by_citation": 0,
+        "uncertain": 0,
+        "evaluation_error": 0
+      }
+    }
+  },
+  {
+    "example_id": "baseline-04",
+    "condition": "standard_top3",
+    "before_claims": [
+      {
+        "claim": "The caster (wheels) can be removed after receiving the product.",
+        "kind": "factual",
+        "nli_status": "unsupported"
+      },
+      {
+        "claim": "The evidence indicates that the casters are initially mounted on the cross bars.",
+        "kind": "factual",
+        "nli_status": "supported"
+      },
+      {
+        "claim": "A small tap on the handle end of the screw mechanism is sufficient to release the casters.",
+        "kind": "factual",
+        "nli_status": "supported"
+      }
+    ],
+    "after_claims": [
+      {
+        "claim": "The caster (wheels) can be removed after receiving the product.",
+        "kind": "factual",
+        "nli_status": "unsupported",
+        "decision_reason": "no_passage_entailment"
+      },
+      {
+        "claim": "The evidence indicates that the casters are initially mounted on the cross bars.",
+        "kind": "factual",
+        "nli_status": "supported",
+        "decision_reason": "passage_entailment"
+      },
+      {
+        "claim": "A small tap on the handle end of the screw mechanism may release the casters.",
+        "kind": "factual",
+        "nli_status": "supported",
+        "decision_reason": "passage_entailment"
+      }
+    ],
+    "before_facts": [
+      {
+        "fact": "if you take the wheels off, the table will fall over.",
+        "evidence_id": "dev:7874",
+        "quote": "if you take the wheels off, the table will fall over."
+      }
+    ],
+    "after_facts": [
+      {
+        "fact": "If the wheels are removed, the table will fall over.",
+        "alignment_status": "aligned",
+        "fact_status": "verified",
+        "fact_reason": "supported",
+        "aligned_span": "if you take the wheels off, the table will fall over."
+      }
+    ],
+    "before_ucr": {
+      "supported": 2,
+      "unsupported": 1,
+      "contradicted": 0,
+      "uncertain": 0,
+      "ucr": 0.3333333333333333,
+      "ucr_conservative": 0.3333333333333333,
+      "undefined": false,
+      "undefined_reason": null
+    },
+    "after_ucr": {
+      "supported": 2,
+      "unsupported": 1,
+      "contradicted": 0,
+      "uncertain": 0,
+      "evaluation_error": 0,
+      "ucr": 0.3333333333333333,
+      "ucr_conservative": 0.3333333333333333,
+      "undefined": false,
+      "undefined_reason": null
+    },
+    "before_coverage": {
+      "numerator": 0,
+      "denominator": 1,
+      "coverage": 0.0,
+      "undefined": false,
+      "undefined_reason": null,
+      "evidence_ids": [
+        "dev:7875",
+        "dev:7873",
+        "dev:7874"
+      ]
+    },
+    "after_coverage": {
+      "numerator": 0,
+      "denominator": 1,
+      "coverage": 0.0,
+      "undefined": false,
+      "undefined_reason": null,
+      "evidence_ids": [
+        "dev:7875",
+        "dev:7873",
+        "dev:7874"
+      ],
+      "verified_facts": 1,
+      "fact_status_counts": {
+        "verified": 1,
+        "unsupported_by_citation": 0,
+        "contradicted_by_citation": 0,
+        "uncertain": 0,
+        "evaluation_error": 0
+      }
+    }
+  },
+  {
+    "example_id": "baseline-04",
+    "condition": "gold_evidence_qa",
+    "before_claims": [],
+    "after_claims": [],
+    "before_facts": [],
+    "after_facts": [],
+    "before_ucr": {
+      "supported": 0,
+      "unsupported": 0,
+      "contradicted": 0,
+      "uncertain": 0,
+      "ucr": null,
+      "ucr_conservative": null,
+      "undefined": true,
+      "undefined_reason": "gold_not_applicable_no_label2"
+    },
+    "after_ucr": {
+      "supported": 0,
+      "unsupported": 0,
+      "contradicted": 0,
+      "uncertain": 0,
+      "evaluation_error": 0,
+      "ucr": null,
+      "ucr_conservative": null,
+      "undefined": true,
+      "undefined_reason": "gold_not_applicable_no_label2"
+    },
+    "before_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "undefined": true,
+      "undefined_reason": "gold_not_applicable_no_label2"
+    },
+    "after_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "undefined": true,
+      "undefined_reason": "gold_not_applicable_no_label2"
+    }
+  },
+  {
+    "example_id": "baseline-05",
+    "condition": "standard_top3",
+    "before_claims": [
+      {
+        "claim": "The product can hold larger items between the net and the closed tailgate.",
+        "kind": "factual",
+        "nli_status": "supported"
+      },
+      {
+        "claim": "The product is spacious and firmly securing when closed.",
+        "kind": "factual",
+        "nli_status": "supported"
+      },
+      {
+        "claim": "There is no information provided about whether the product can hold golf clubs.",
+        "kind": "not_a_factual_claim",
+        "nli_status": null
+      },
+      {
+        "claim": "It is not stated whether the product would hold golf clubs in the back of a 2017 Tacoma.",
+        "kind": "not_a_factual_claim",
+        "nli_status": null
+      }
+    ],
+    "after_claims": [
+      {
+        "claim": "The product can hold larger items between the net and the closed tailgate.",
+        "kind": "factual",
+        "nli_status": "supported",
+        "decision_reason": "passage_entailment"
+      },
+      {
+        "claim": "There is no information provided about golf clubs or their specific size or weight requirements.",
+        "kind": "not_a_factual_claim",
+        "nli_status": null,
+        "decision_reason": null
+      },
+      {
+        "claim": "It is not stated whether the product would hold golf clubs in the back of a 2017 Tacoma.",
+        "kind": "not_a_factual_claim",
+        "nli_status": null,
+        "decision_reason": null
+      }
+    ],
+    "before_facts": [],
+    "after_facts": [],
+    "before_ucr": {
+      "supported": 2,
+      "unsupported": 0,
+      "contradicted": 0,
+      "uncertain": 0,
+      "ucr": 0.0,
+      "ucr_conservative": 0.0,
+      "undefined": false,
+      "undefined_reason": null
+    },
+    "after_ucr": {
+      "supported": 1,
+      "unsupported": 0,
+      "contradicted": 0,
+      "uncertain": 0,
+      "evaluation_error": 0,
+      "ucr": 0.0,
+      "ucr_conservative": 0.0,
+      "undefined": false,
+      "undefined_reason": null
+    },
+    "before_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "undefined": true,
+      "undefined_reason": "no_required_facts",
+      "evidence_ids": [
+        "dev:3615",
+        "dev:3612",
+        "dev:3616"
+      ]
+    },
+    "after_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "undefined": true,
+      "undefined_reason": "no_required_facts",
+      "evidence_ids": [
+        "dev:3615",
+        "dev:3612",
+        "dev:3616"
+      ],
+      "verified_facts": 0,
+      "fact_status_counts": {
+        "verified": 0,
+        "unsupported_by_citation": 0,
+        "contradicted_by_citation": 0,
+        "uncertain": 0,
+        "evaluation_error": 0
+      }
+    }
+  },
+  {
+    "example_id": "baseline-05",
+    "condition": "gold_evidence_qa",
+    "before_claims": [
+      {
+        "claim": "The product mentions holding various items like groceries, tools, and small items.",
+        "kind": "factual",
+        "nli_status": "supported"
+      },
+      {
+        "claim": "There is no specific information about golf clubs or compatibility with a 2017 Tacoma's bed.",
+        "kind": "not_a_factual_claim",
+        "nli_status": null
+      }
+    ],
+    "after_claims": [
+      {
+        "claim": "The product mentions holding various items like groceries, tools, and small items.",
+        "kind": "factual",
+        "nli_status": "supported",
+        "decision_reason": "passage_entailment"
+      },
+      {
+        "claim": "There is no specific information about golf clubs or compatibility with a 2017 Tacoma's bed.",
+        "kind": "not_a_factual_claim",
+        "nli_status": null,
+        "decision_reason": null
+      }
+    ],
+    "before_facts": [],
+    "after_facts": [],
+    "before_ucr": {
+      "supported": 1,
+      "unsupported": 0,
+      "contradicted": 0,
+      "uncertain": 0,
+      "ucr": 0.0,
+      "ucr_conservative": 0.0,
+      "undefined": false,
+      "undefined_reason": null
+    },
+    "after_ucr": {
+      "supported": 1,
+      "unsupported": 0,
+      "contradicted": 0,
+      "uncertain": 0,
+      "evaluation_error": 0,
+      "ucr": 0.0,
+      "ucr_conservative": 0.0,
+      "undefined": false,
+      "undefined_reason": null
+    },
+    "before_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "undefined": true,
+      "undefined_reason": "no_required_facts",
+      "evidence_ids": [
+        "dev:3612",
+        "dev:3613",
+        "dev:3614",
+        "dev:3615",
+        "dev:3616"
+      ]
+    },
+    "after_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "undefined": true,
+      "undefined_reason": "no_required_facts",
+      "evidence_ids": [
+        "dev:3612",
+        "dev:3613",
+        "dev:3614",
+        "dev:3615",
+        "dev:3616"
+      ],
+      "verified_facts": 0,
+      "fact_status_counts": {
+        "verified": 0,
+        "unsupported_by_citation": 0,
+        "contradicted_by_citation": 0,
+        "uncertain": 0,
+        "evaluation_error": 0
+      }
+    }
+  }
+]

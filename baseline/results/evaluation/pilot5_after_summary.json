@@ -1,0 +1,51 @@
+{
+  "preliminary": true,
+  "human_validated": false,
+  "examples": [
+    "baseline-01",
+    "baseline-02",
+    "baseline-03",
+    "baseline-04",
+    "baseline-05"
+  ],
+  "coverage_scope": "evidence shown to that condition; numerator and denominator use the same fact list",
+  "discarded_denominator": "14/38 and 24/38 are not used",
+  "conditions": [
+    {
+      "condition": "standard_top3",
+      "answers": 5,
+      "ucr_micro": 0.4286,
+      "ucr_macro": 0.3333,
+      "ucr_defined_answers": 4,
+      "ucr_undefined_answers": 1,
+      "supported": 4,
+      "unsupported": 3,
+      "uncertain": 2,
+      "evaluation_error": 0,
+      "coverage_micro": 0.5,
+      "coverage_macro": 0.5,
+      "coverage_numerator": 1,
+      "coverage_denominator": 2,
+      "coverage_defined_answers": 2,
+      "coverage_undefined_answers": 3
+    },
+    {
+      "condition": "gold_evidence_qa",
+      "answers": 5,
+      "ucr_micro": 0.25,
+      "ucr_macro": 0.1667,
+      "ucr_defined_answers": 3,
+      "ucr_undefined_answers": 2,
+      "supported": 3,
+      "unsupported": 1,
+      "uncertain": 0,
+      "evaluation_error": 0,
+      "coverage_micro": 1.0,
+      "coverage_macro": 1.0,
+      "coverage_numerator": 1,
+      "coverage_denominator": 1,
+      "coverage_defined_answers": 1,
+      "coverage_undefined_answers": 4
+    }
+  ]
+}

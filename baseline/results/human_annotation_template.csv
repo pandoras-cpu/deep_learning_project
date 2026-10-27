@@ -1,0 +1,284 @@
+example_id,condition,qid,asin,question,evidence_ids,evidence_text,model_answer,error,claim_text,claim_label,answerable_fact,fact_expressed_correctly,abstention_appropriate,correctness,annotator_notes
+baseline-01,standard_rag,6260,B00EVVO1DG,how do i custom crop?,dev:6972 | dev:6974 | dev:6975,"[dev:6972] you can if you want put on multiple photo's and even crop them to different shapes. Question: can you create a posterized version of your photos?
+
+[dev:6974] line tool editor-add points or curves to your lines to create distinct, custom, lines
+
+[dev:6975] easiest is to use a preset template and use clipart that comes with program. Question: is this program compatible with clip art or is it like clip art?",You can custom crop your photos by putting on multiple photos and cropping them to different shapes. This is supported by the evidence provided.,,,,,,,,
+baseline-02,standard_rag,1889,B0015MLI30,would the medium size be big enough for a 25lb boston terrier or should i order the large?,dev:2055 | dev:2052 | dev:2053,"[dev:2055] i got the large and i have a boston terrier, 20 lbs.
+
+[dev:2052] i ordered the large size because it's listed as being for a pet up to 25 lbs.
+
+[dev:2053] the medium size is really for small dogs under 20 lbs max.","The medium size is listed as being for small dogs under 20 lbs max. Since a 25 lb Boston terrier exceeds this limit, the medium size would not be big enough. Therefore, you should order the large size.",,,,,,,,
+baseline-03,standard_rag,1181,B005EWF4BY,do they use any type of flame retardants on or in this item?,dev:1225 | dev:1223 | dev:1224,"[dev:1225] however, i'm not a fan of the chemical fire retardants in polyurethane foam (and there wasn't anything that made me believe this foam was free of fire retardants) so i went ahead and replaced the foam with a piece of 2"" organic latex cut to the same size.
+
+[dev:1223] so get the baby bjorn and get orbit baby for car seat (also oeko-tex certified) and if buying anything else always ask the company if they use fire retardants or any other toxic chemicals or pvc and if they test for heavy metals!
+
+[dev:1224] you should never ever ever buy any crib that contains fire retardants or other toxic chemicals as the p&t does!!!!","It is not stated whether flame retardants are used on or in the item. The evidence mentions concerns about chemical fire retardants in polyurethane foam and a replacement with organic latex, but it does not confirm the presence or absence of flame retardants in the specific item in question.",,,,,,,,
+baseline-04,standard_rag,7043,B004GACU0S,can the caster (the wheels) be removed after receipt of product?,dev:7875 | dev:7873 | dev:7874,"[dev:7875] rayburn, i don't believe the sturdiness of the table would have anything to do with the casters. Question: hello, is the table sturdy enough to use without the casters (wheels)? i would like to place under my bed which only has about 2 1/2 clearance.
+
+[dev:7873] note: it make take a small tap on the handle end of the screw mechanism to release it.the casters come mounted on the cross bars.
+
+[dev:7874] if you take the wheels off, the table will fall over. Question: can anyone tell me if this would fit under my softa with 1-1/2"" of space if i took the wheels off?","Yes, the caster (the wheels) can be removed after receipt of product. The evidence states that ""the casters come mounted on the cross bars"" and ""it may take a small tap on the handle end of the screw mechanism to release it,"" indicating that the wheels can be removed with a simple action.",,,,,,,,
+baseline-05,standard_rag,3276,B00540KPS8,i am wondering if this would hold my golf clubs in them in the back of my 2017 tacoma?,dev:3615 | dev:3612 | dev:3616,"[dev:3615] it now works as a holder for small items and holds larger items between the net and the closed tailgate.
+
+[dev:3612] it is surprisingly spacious to hold your stuff.
+
+[dev:3616] it secures firmly in the bed of the truck and holds tons of stuff without missing a beat.","The evidence does not specify whether the product can hold golf clubs. While it mentions holding ""larger items between the net and the closed tailgate"" and being ""spacious"" and ""firmly securing,"" there is no information about golf clubs or their specific size or weight requirements. Therefore, it is not stated whether this would hold golf clubs in the back of a 2017 Tacoma.",,,,,,,,
+baseline-06,standard_rag,3045,B005HFB7L4,i have a whirlpool model #ed5vhgxmb10. will this work in this unit and does it come assembled?,dev:3330 | dev:3326 | dev:3324,"[dev:3330] if this is a replacement, probably yes as long as it’s a top or bottom freezer fridge and not a side by side. Question: will this fit in a whirlpool model wrb119wfbw?
+
+[dev:3326] the description of the part says it will fit most all whirlpool and kenmore top or bottom freezer fridges so i took my chances since the price was so good. Question: will this fit the w8txnngbb01
+
+[dev:3324] all i can say is when i researched the ice maker for my 10 year old whirlpool 18 cu ft fridge this model said ""fits most top freezer whirlpool, kennmore, roper and maytag fridges"". Question: will this fit whirlpool gx2fhdxvt02?",It is not stated whether this will work in a Whirlpool model #ED5VHGXMB10. It is also not stated whether the product comes assembled.,,,,,,,,
+baseline-07,standard_rag,2880,B00063RXQK,do you like your music loud or easy listening?,dev:3143 | dev:3145 | dev:3146,"[dev:3143] thought it would improve over time with seasoning or as i cooked, but it's been over a year and it's still extremely loud to use with a metal spatula.- very very heavy.
+
+[dev:3145] it works like a charm and is easy to use.
+
+[dev:3146] buy on the low side, of course.with this wok and any other cast iron, once you understand how to use the pot for your recipe, you should expect pleasant results each time.","The evidence provided does not address music preferences or any related topic. Therefore, it is not stated.",,,,,,,,
+baseline-08,standard_rag,2119,B004NIA8E8,what's the difference with other same products?,dev:2315 | dev:2313 | dev:2314,"[dev:2315] there is a difference in light intensity of the other units i have installed.
+
+[dev:2313] the 2 fixture unit is different than the 3 fixture unit.
+
+[dev:2314] it was no different than any other fixtures-just mount to an electrical box. Question: does this has its own ballast? if not, does it need one? how hard is it to install? i am trying to replace heavy duty lamps in my driveway.","The evidence does not state whether this product has its own ballast, whether it needs one, or how hard it is to install. It also does not provide information about differences with other same products. The only mention of differences is that the 2 fixture unit is different than the 3 fixture unit and that there is a difference in light intensity of the other units installed, but no specific comparison to ""same products"" is given. Therefore, the question about differences with other same products is not fully supported by the evidence.",,,,,,,,
+baseline-09,standard_rag,7024,B0053PYD3W,if i don't have a heat gun can i use a hair dryer?,dev:7833 | dev:7832 | dev:7836,"[dev:7833] shrinks very easily with a heatgun or even a hair dryer.
+
+[dev:7832] heat shrink tubing is wire insulation which shrinks to a smaller size when heated with a hair dryer or something similar.
+
+[dev:7836] i have used anything from a match to a heat gun to activate this tubing and they all do the job.","Yes, if you don't have a heat gun, you can use a hair dryer. The evidence states that heat shrink tubing shrinks when heated with a hair dryer or something similar, and that a hair dryer can be used to activate the tubing.",,,,,,,,
+baseline-10,standard_rag,18,B00545ATZW,"my frigidaire model # is frs20qrb.  ""not found"" on pop-up list.  will this one fit?",dev:6 | dev:4 | dev:5,"[dev:6] i am assuming it will fit. Question: my frigidare model # is frt18is6jbo, will part # 240337103 fit it?
+
+[dev:4] im not sure but i believe you can go on google and ask this same question and they will tell you what models that piece fits on Question: will this fit in a frigidaire model #frt18drh?
+
+[dev:5] frigidaire oem part #240337103 yes this crisper drawer matches your model Question: will this fit kenmore refrigerator 25367889506?",It is not stated whether part #240337103 will fit a Frigidaire model #FRS20QRB.,,,,,,,,
+baseline-11,standard_rag,653,B004HHJWEW,what phone services does this phone work with?,dev:633 | dev:632 | dev:640,"[dev:633] the phone is unlock, so it can be used with any gsm network include cricket Question: is this phone compatible with or work with ""cricket"" service
+
+[dev:632] it is compatible with our local phone service so i imagine it would be with a national phone service. Question: is it compatible with verizon wireless?
+
+[dev:640] i have tried all carriers. Question: i want to buy this phone fir my daughter m. she us nine yrs old. should i get this one for her","The phone works with any GSM network, including Cricket. It is also compatible with local phone service and, by implication, national phone service. However, specific compatibility with Verizon Wireless is not explicitly confirmed in the evidence. Therefore, based on the provided information, the phone works with GSM networks, including Cricket, and is compatible with local and national phone services. Compatibility with Verizon Wireless is not stated.",,,,,,,,
+baseline-12,standard_rag,7040,B00H7VEU06,how meny meter`s cubic have?,dev:7865 | dev:7869 | dev:7862,"[dev:7865] the xyzprinting abs filament is a 600g of 1.75-mm diameter black filament for use with the xyzprinting davinci 1 3d printer (sold separately).
+
+[dev:7869] the xyzprinting abs filament is a 600g of 1.75-mm diameter black filament for use with the xyzprinting davinci 1.0 3d printer (sold separately).
+
+[dev:7862] the cartridges come in two different sizes 300g(120m) and 600g(240m) Question: why my printer say 120m in filament no 240?","The evidence does not provide information about how many meters cubic the filament has. Therefore, it is not stated.",,,,,,,,
+baseline-13,standard_rag,8371,B002OHDFOA,can you connect multiple cameras to same ip?,dev:9292 | dev:9296 | dev:9294,"[dev:9292] if you have more than one camera setup more ports to their addresses.
+
+[dev:9296] also i would set the ip to dynamic ip, becuase i was having issues with my wireless printer and the camera being assigned same ip addresses!
+
+[dev:9294] theoretically you can set up more than one camera to monitor multiple locations in the house.the camera that i got only works on 2.4 gig wireless n.  i would have preferred it to work on the 5 gig wireless n but i guess you can't have everything.","No, you cannot connect multiple cameras to the same IP address. The evidence states that if you have more than one camera setup, you need more ports to their addresses, implying that each camera requires a unique address. Additionally, the user mentions setting the IP to dynamic to avoid conflicts with other devices like a wireless printer, indicating that IP address conflicts can occur if multiple devices are assigned the same IP. This supports the idea that each camera should have a distinct IP address. Therefore, connecting multiple cameras to the same IP is not supported by the evidence.",,,,,,,,
+baseline-14,standard_rag,5505,B000F0FX5C,how many tbsps of broccoli sprout seeds will fill one tray?,dev:6104 | dev:6102 | dev:6105,"[dev:6104] the individual large trays produce a ton of sprouts so fill accordingly. Question: how many trays are there in this package?  it says ""triple"" sprouter, but doesn't say if it is 3 dividers or 3 trays.
+
+[dev:6102] these are great for growing any amount of sprouts, from a 1/2 tray to 3 full trays... love them!
+
+[dev:6105] 2t per side is all you need. Question: what is the size of the tray?   length and width?",The evidence does not state how many tablespoons of broccoli sprout seeds will fill one tray.,,,,,,,,
+baseline-15,standard_rag,1653,B000SARK0A,classic chai how is it?,dev:1833 | dev:1832 | dev:1835,"[dev:1833] this is a good quality and tasting classic chai tea.
+
+[dev:1832] it's terrific, as is the classic chai they sell also.
+
+[dev:1835] i take my tea seriously and this classic chai tastes really delicious.","Classic chai is described as good quality and tasting delicious. It is also described as terrific and really delicious, and is considered a classic tea that tastes really good.",,,,,,,,
+baseline-16,standard_rag,5838,B0083F9OTW,would it help with dog fighting?,dev:6544 | dev:6542 | dev:6545,"[dev:6544] after seeing a trainer use this at petsmart to curb barking during a training session i got it to see if it would stop a dog fight.
+
+[dev:6542] you're better off with pepper spray against an aggressive dog or person for that matter. Question: could this be used on aggressive dogs while hiking? i need something to protect my 13lb female hiking partner. 4 unteatherd pitbulls last hiking trip.
+
+[dev:6545] when my dog started being aggressive with my other dog, i sprayed her.","The evidence does not state whether this product would help with dog fighting. It only mentions that the user saw a trainer use it at Petsmart to curb barking during a training session and that the user tried it when their dog started being aggressive with another dog. There is no information about its effectiveness in stopping a dog fight. Therefore, based on the provided evidence, it is not stated whether it would help with dog fighting.",,,,,,,,
+baseline-17,standard_rag,4470,B00DC7G0GG,why is this $75?,dev:4964 | dev:4962 | dev:4968,"[dev:4964] couldn't really tell you why they charge more for the digital Question: how come the retail version is cheaper than the digital one?
+
+[dev:4962] this is a complete waste of money.
+
+[dev:4968] publication_date:  { value:2013-11-22t00:00:01z }",The evidence does not state why this is $75.,,,,,,,,
+baseline-18,standard_rag,1199,B000056OUX,can the net be secured around a corner with a corner banister and continue on?,dev:1282 | dev:1288 | dev:1286,"[dev:1282] probably not...it's basically netting with attached strings which need to be secured to the banister at the top and bottom and sides. Question: would i be able to nail this to a baseboard at the bottom? can you secure it on short stairway with no vertical railings- just a banister at the top?
+
+[dev:1288] it is a 10' railnet, universal size and has railing ties and screw eyes which helps keep net securely attached.
+
+[dev:1286] it could be folded over on itself and secured to take up the slack, so to speak. Question: can i cut it? so that i have a 4 foot section for one side of my stairs and a 6 foot section for the other?","The evidence does not state whether the net can be secured around a corner with a corner banister and continue on. Therefore, this fact is not stated.",,,,,,,,
+baseline-19,standard_rag,1193,B00155WJ4E,can i use this belly bar to attach the maxi cosi cabrio car seat to the city mini?,dev:1263 | dev:1266 | dev:1265,"[dev:1263] you can't use them together because belly bar should be installed in the same place, that is used for car seat adapter Question: can i use this and also snap our infant car seat into the stroller (we use the britax b safe infant car seat with the britax adapter.
+
+[dev:1266] just my two cents :)oh yeah- the bar can be used as a car seat adaptor/holder!!!!
+
+[dev:1265] snaps on to my city mini and allows me to attach his toys via stroller/toy links.","The evidence does not state whether the belly bar can be used to attach the Maxi Cosi Cabrio car seat to the City Mini. While one passage mentions the belly bar can be used as a car seat adaptor/holder and another refers to using it with a Britax adapter, there is no specific information about compatibility with the Maxi Cosi Cabrio or the City Mini. Therefore, based on the provided evidence, it is not stated whether the belly bar can be used for that purpose.",,,,,,,,
+baseline-20,standard_rag,1677,B00032G1S0,is it true that dustin lance black wrote the label for tuscan whole milk?,dev:1883 | dev:1886 | dev:1885,"[dev:1883] the label on it said tuscan whole milk but when it arrived in the mail today, it was tuscan half milk!!...
+
+[dev:1886] does that label on the gallon jug of tuscan whole milk say ""vitamin d""?
+
+[dev:1885] it is true that the contents of this product are while milk but it is not proper then to ask, ""while milk what?"" Question: is it true that the contents of this product are ""while milk""? and if so, while milk what?",It is not stated whether Dustin Lance Black wrote the label for Tuscan whole milk.,,,,,,,,
+baseline-21,standard_rag,2855,B00BMC54I8,does this table have a cardboard back to it or is it real wood?,dev:3093 | dev:3094 | dev:3096,"[dev:3093] the back is actually pressboard that is almost like stiff cardboard.the main problem for me is that it looks like veneered particle board, and the veneer pattern itself looks like what you would find on cheap wood paneling, and isn't convincing as pretending to be ""wood"".
+
+[dev:3094] the back.is nailed-on cardboard so that's not too presentable Question: is the table presentable from all four sides?  the positioning in my house will expose the back side, and there are no rear shots.
+
+[dev:3096] not real wood but it look super nice and is extremely sturdy.","The table has a cardboard back. The evidence states that ""the back is actually pressboard that is almost like stiff cardboard"" and ""the back is nailed-on cardboard,"" indicating it is not real wood.",,,,,,,,
+baseline-22,standard_rag,2953,B0034JU6W6,where can i purchase the pb-250?,dev:3233 | dev:3235 | dev:3232,"[dev:3233] (pls note: amazon customer support confirmed to me that my purchase can't be stated as verified because it was for a tribest 200 blender and not this product, a 250 blender.
+
+[dev:3235] you can look on their website, they have a section of replacement parts. Question: where can i buy replacement commuter lids?
+
+[dev:3232] i found this great deal on amazon!",The evidence does not state where the PB-250 can be purchased.,,,,,,,,
+baseline-23,standard_rag,5135,B007NHS9M4,"if the bottom number is gallons, what is the top row of numbers display?",dev:5726 | dev:5723 | dev:5722,"[dev:5726] the display has two lines that default to display the total number of gallons.
+
+[dev:5723] displayed translates to about 7.56 us gallons(6.3 x 1.2), which is not an overage...
+
+[dev:5722] i used the meter to fill a 5 gallon bucket and it was accurate to about 0.1 gallons, which is to be expected.the top display is like the trip odometer in your car.","The evidence does not specify what the top row of numbers displays when the bottom number is gallons. It only states that the display has two lines that default to display the total number of gallons. Therefore, the top row's content when the bottom number is gallons is not stated.",,,,,,,,
+baseline-24,standard_rag,5991,B002ERRGT0,will the grandera trim #19944 fit this valve?,dev:6655 | dev:6652 | dev:6654,"[dev:6655] that trim is a diverter trim and this valve is a pressure balance valve. Question: will grohe 29108001 trim work with grohe 35015001
+
+[dev:6652] yes, this valve and trim will work together. Question: does this work with the grohe 19457en1 concetto pressure balance valve trim?
+
+[dev:6654] yes this will work with any trim that uses the 35015000 valve. Question: will this work with bauloop? specs say 3501500 is the valve but this says it's s newer version. trying not to buy the wrong valve.",It is not stated whether the Grandera trim #19944 will fit the valve.,,,,,,,,
+baseline-25,standard_rag,1187,B006QI1PCW,my baby is 70 cm and 8.5 kg it will be useful for him ?,dev:1242 | dev:1246 | dev:1251,"[dev:1242] features: extra jump allows baby to exercise legs while being entertained take with me toys provide for customizable learn and play experience 3-position height adjustment provides baby with secure learn and play environment manufacturer recommended weight/height/age limits: weight: up to 24 pounds.
+
+[dev:1246] i think this jumper would be great for an older baby however it doesn't remotely keep my little ones attention.
+
+[dev:1251] our baby is 28 inches tall and 21 lbs and the feet are touching the bounce base flat footed.","First, convert the given measurements to inches and pounds for comparison with the evidence:
+
+- 70 cm is approximately 27.5 inches.
+- 8.5 kg is approximately 18.7 pounds.
+
+From the evidence:
+- The manufacturer recommends a maximum weight of up to 24 pounds.
+- The product has a 3-position height adjustment and is designed for a secure learn and play environment.
+
+The baby's weight (18.7 pounds) is within the manufacturer's recommended weight limit of 24 pounds.
+
+The baby's height (27.5 inches) is close to the height mentioned in the evidence (28 inches), and the evidence notes that a baby at 28 inches tall with flat feet has the feet touching the bounce base. This suggests the product may be suitable for a baby of this height.
+
+The evidence does not state whether the product is suitable for babies at 70 cm and 8.5 kg specifically, but it does indicate that the product is designed for babies up to 24 pounds and that height adjustments are available.
+
+Therefore, based on the evidence, the product may be useful for the baby, as the weight and height fall within or near the recommended parameters. However, the evidence does",,,,,,,,
+baseline-26,standard_rag,5599,B002C0E5VG,"is this a ""san francisco"" sour dough culture or can it be used for italian bread?",dev:6242 | dev:6245 | dev:6243,"[dev:6242] the starter is used to create the san francisco sourdough taste and texture of bread. Question: can i use whole wheat flour for bread making with that starter?
+
+[dev:6245] this bread is mildly sour, but it doesn't have to same tang that san francisco sour dough has.
+
+[dev:6243] but i can tell you that this starter is the closest to true san francisco sourdough i have ever found. Question: specifically, which lactobacillus bacteria is this?","The evidence does not specify which lactobacillus bacteria is in the starter, so that fact is not stated.
+
+The evidence states that the starter is ""the closest to true San Francisco sourdough I have ever found"" and that the bread made with it is ""mildly sour,"" but it does not state whether it can be used for Italian bread. Therefore, it is not stated whether this starter can be used for Italian bread.",,,,,,,,
+baseline-27,standard_rag,2616,B0000AQNVK,will this card stock work for hallmark card studio?,dev:2912 | dev:2913 | dev:2914,"[dev:2912] this is great card stock that i use with my hallmark card studio software and print on my lexmark printer.
+
+[dev:2913] i use these with hallmark card studio and they produce truly professional cards.
+
+[dev:2914] works well with my hallmark program.","Yes, this card stock will work with Hallmark Card Studio. The evidence states that the user uses this card stock with Hallmark Card Studio software and that it works well with the program and produces professional results.",,,,,,,,
+baseline-28,standard_rag,6881,B005C29QN8,compatible with hp 22er?,dev:7654 | dev:7653 | dev:7652,"[dev:7654] it has 2 different size options so i'd imagine it'll work with most monitors. Question: will this work for an hp monitor ? or a better question, is it universal ?
+
+[dev:7653] compatible with standard vesa holes in use on lcd/led tvs. Question: is it compatible with benq gl2760h ?? 27"" i'm worried that the back may not fit
+
+[dev:7652] this mount is compatible with most computer monitors up to 30"" screen size. Question: can i mount a 34"" ultrawide on this?",It is not stated whether the mount is compatible with the HP 22er.,,,,,,,,
+baseline-29,standard_rag,633,B00F3KBE8O,is there a plantronics voyager legend microusb charge adapter  in the box?,dev:612 | dev:616 | dev:615,"[dev:612] plantronics voyager legend bluetooth headset was missing, received plantronics magnetic usb cable, and a kyocera ac adapter.
+
+[dev:616] so just go ahead and add $70 to whatever price you're about to pay and if it's still worth it, then add the desktop charger (~$29), the traveling battery case (~$29) and an additional cheapo adapter (~$10) - all of which (well at least the case and desktop charger) should have been included for the ridiculous headset price.additionally, the battery case feels incredibly cheap but is one of the most useful out there.
+
+[dev:615] performance of the plantronics voyager is everything i had hoped it would be, but the ""bulk"" packaging actually meant that it included nothing but the headset and charger and it was noticeably used/possibly refurbished (the piece that goes in my ear seems new, but there was scrapes on the side that showed it had been charged and used before).","It is not stated whether there is a Plantronics Voyager Legend microUSB charge adapter in the box. The evidence mentions a ""Plantronics magnetic USB cable"" and a ""Kyocera AC adapter"" being received, but does not specify a microUSB charge adapter. Therefore, based on the provided information, it cannot be confirmed.",,,,,,,,
+baseline-30,standard_rag,6778,B00164D5R4,does this device translate single words or only phrases?,dev:7523 | dev:7525 | dev:7522,"[dev:7523] the only down side is that this only has translations for common phrases.
+
+[dev:7525] the voice used is text to speech, so it is not a major help in pronouncing the words, ive even had the voice function corrected by locals...the pharse list is not very extensive, it includes some bizarre phrases such as ""this is my daughter"" and lacks basic phrases such as ""im sorry"" and ""i dont speak spanish""... there is also no 'romantic' dialog phrase section, which ive personally found to be a minus...if you have a smart phone, i would recommend just using google translate.
+
+[dev:7522] lots of phrases but still need an electronic or printed dictionary for individual words.","The device only translates common phrases and does not translate single words. It lacks basic phrases such as ""im sorry"" and ""i dont speak spanish,"" and users need an electronic or printed dictionary for individual words. Therefore, it does not translate single words.",,,,,,,,
+baseline-01,gold_evidence_qa,6260,B00EVVO1DG,how do i custom crop?,dev:6973,[dev:6973] i just added the rulers and adjusted  to the size i wanted and it printed out everything even smaller.,It is not stated in the evidence how to custom crop.,,,,,,,,
+baseline-02,gold_evidence_qa,1889,B0015MLI30,would the medium size be big enough for a 25lb boston terrier or should i order the large?,dev:2054,"[dev:2054] measures exterior : 22|""l x 17|""w x 11.5|""h interior : 18|""l x 13|""w x 3|""h for pets up to 25lbs","The evidence states that the medium size has interior dimensions of 18"" L x 13"" W x 3"" H and is suitable for pets up to 25 lbs. Since a 25 lb Boston Terrier is within the weight limit specified, the medium size would be big enough. Therefore, you should order the medium size.",,,,,,,,
+baseline-03,gold_evidence_qa,1181,B005EWF4BY,do they use any type of flame retardants on or in this item?,dev:1222 | dev:1226,"[dev:1222] baby bjorn doesn't use fire retardants on their products, something we absolutely wanted.
+
+[dev:1226] it is the only one that is not coated in flame retardants, folds much smaller and is much easier to put up.","No, they do not use any type of flame retardants on or in this item.",,,,,,,,
+baseline-04,gold_evidence_qa,7043,B004GACU0S,can the caster (the wheels) be removed after receipt of product?,,,,no_label2_evidence,,,,,,,
+baseline-05,gold_evidence_qa,3276,B00540KPS8,i am wondering if this would hold my golf clubs in them in the back of my 2017 tacoma?,dev:3612 | dev:3613 | dev:3614 | dev:3615 | dev:3616,"[dev:3612] it is surprisingly spacious to hold your stuff.
+
+[dev:3613] holds pretty much everything i can fit in it from sliding about in my bed
+
+[dev:3614] expands to easily hold a full load of groceries or tools without problem.since this net mounts at the top to the rail system in the bed, i recommend using a bungee cord to secure the bottom of the net to the front tie-downs in the bed and putting the net about two feet in.
+
+[dev:3615] it now works as a holder for small items and holds larger items between the net and the closed tailgate.
+
+[dev:3616] it secures firmly in the bed of the truck and holds tons of stuff without missing a beat.","The evidence does not state whether the product would hold golf clubs in the back of a 2017 Tacoma. While it mentions holding various items like groceries, tools, and small items, and that it can hold a full load, there is no specific information about golf clubs or compatibility with a 2017 Tacoma's bed. Therefore, it is not stated.",,,,,,,,
+baseline-06,gold_evidence_qa,3045,B005HFB7L4,i have a whirlpool model #ed5vhgxmb10. will this work in this unit and does it come assembled?,dev:3322 | dev:3324 | dev:3325 | dev:3326,"[dev:3322] the description says “fits most all whirlpool, kenmore, amanda, kitchen aid and roper top or bottom freezers. Question: anyone know of this would add ice maker function to a kenmore model 69312 fridge? no ice maker currently.
+
+[dev:3324] all i can say is when i researched the ice maker for my 10 year old whirlpool 18 cu ft fridge this model said ""fits most top freezer whirlpool, kennmore, roper and maytag fridges"". Question: will this fit whirlpool gx2fhdxvt02?
+
+[dev:3325] when i checked the ice maker it said fits most all whirlpool, kenmore, roper upright top freezer refrigerators. Question: will this fit roper rs22aqxfn01 ?
+
+[dev:3326] the description of the part says it will fit most all whirlpool and kenmore top or bottom freezer fridges so i took my chances since the price was so good. Question: will this fit the w8txnngbb01","The evidence does not state whether the ice maker will work in a Whirlpool model #ED5VHGXB10 or whether it comes assembled. Therefore, this information is not stated in the provided evidence.",,,,,,,,
+baseline-07,gold_evidence_qa,2880,B00063RXQK,do you like your music loud or easy listening?,,,,no_label2_evidence,,,,,,,
+baseline-08,gold_evidence_qa,2119,B004NIA8E8,what's the difference with other same products?,dev:2312 | dev:2314 | dev:2315 | dev:2316,"[dev:2312] this is a better set up than some other lights as the mounting hardware is effortless weatherized.
+
+[dev:2314] it was no different than any other fixtures-just mount to an electrical box. Question: does this has its own ballast? if not, does it need one? how hard is it to install? i am trying to replace heavy duty lamps in my driveway.
+
+[dev:2315] there is a difference in light intensity of the other units i have installed.
+
+[dev:2316] the light is diffused faster than the other led floodlights, so the range of light isn't what i was hoping for.","The difference with other same products includes the mounting hardware being more effortless and weatherized, and the light diffusing faster than other LED floodlights, resulting in a less-than-expected range of light. Additionally, there is a difference in light intensity compared to other units installed. However, the evidence does not specify whether these differences are due to the product itself or other factors like installation or environmental conditions.",,,,,,,,
+baseline-09,gold_evidence_qa,7024,B0053PYD3W,if i don't have a heat gun can i use a hair dryer?,dev:7832 | dev:7833 | dev:7836,"[dev:7832] heat shrink tubing is wire insulation which shrinks to a smaller size when heated with a hair dryer or something similar.
+
+[dev:7833] shrinks very easily with a heatgun or even a hair dryer.
+
+[dev:7836] i have used anything from a match to a heat gun to activate this tubing and they all do the job.","Yes, if you don't have a heat gun, you can use a hair dryer. The evidence states that heat shrink tubing shrinks very easily with a hair dryer or even a heat gun, and that a hair dryer can be used to activate the tubing.",,,,,,,,
+baseline-10,gold_evidence_qa,18,B00545ATZW,"my frigidaire model # is frs20qrb.  ""not found"" on pop-up list.  will this one fit?",dev:3,"[dev:3] if your frig calls for the 240337103 crisper drawer, then this drawer should fit correctly. Question: i have a kenmore refrigerator, looking for 2 drawers, part #240337103 - will this fit?","The evidence does not state whether the part #240337103 crisper drawer will fit a Frigidaire model FRS20QRB refrigerator. While it mentions that if a frig calls for the 240337103 crisper drawer, then this drawer should fit correctly, there is no specific information confirming compatibility with the FRS20QRB model. Therefore, based on the provided evidence, it is not stated whether this part will fit.",,,,,,,,
+baseline-11,gold_evidence_qa,653,B004HHJWEW,what phone services does this phone work with?,dev:632 | dev:633 | dev:634 | dev:635 | dev:636,"[dev:632] it is compatible with our local phone service so i imagine it would be with a national phone service. Question: is it compatible with verizon wireless?
+
+[dev:633] the phone is unlock, so it can be used with any gsm network include cricket Question: is this phone compatible with or work with ""cricket"" service
+
+[dev:634] we have verizon  we did not have any problems with  the phone .i assumed if the phone is unlocked you should be able to use it any wireless provider. Question: is it unlocked also is it a branded phone e.g sprint or verizon??
+
+[dev:635] the seller (oem store) claimed that it would be shipped with instructions on how to change the settings for gsm use and how to download the service books for at&t and t-mobile gsm services (mms, internet, etc.)
+
+[dev:636] all features incluingblackberry messenger (bbm)webbrowsingit will not work with verizon or sprint.but it will work with any gsm carrier in the world and south america like t-mobile, at&t telefonica, orange, etc.over all best value of blackberry.","This phone works with any GSM carrier in the world and South America, such as T-Mobile, AT&T, Telefonica, and Orange. It does not work with Verizon or Sprint. It is compatible with GSM networks, including Cricket, and works with AT&T and T-Mobile GSM services (MMS, internet, etc.). The phone is unlocked and not branded by Sprint or Verizon.",,,,,,,,
+baseline-12,gold_evidence_qa,7040,B00H7VEU06,how meny meter`s cubic have?,dev:7862,[dev:7862] the cartridges come in two different sizes 300g(120m) and 600g(240m) Question: why my printer say 120m in filament no 240?,"The evidence states that the cartridges come in two different sizes: 300g (120m) and 600g (240m). This indicates that 300g corresponds to 120 meters and 600g corresponds to 240 meters. 
+
+However, the question ""how meny meter`s cubic have?"" is not supported by the evidence. The provided information does not mention ""cubic meters"" or any volume in cubic units. Therefore, the concept of ""meters cubic"" is not addressed in the evidence.
+
+Answer: It is not stated.",,,,,,,,
+baseline-13,gold_evidence_qa,8371,B002OHDFOA,can you connect multiple cameras to same ip?,,,,no_label2_evidence,,,,,,,
+baseline-14,gold_evidence_qa,5505,B000F0FX5C,how many tbsps of broccoli sprout seeds will fill one tray?,,,,no_label2_evidence,,,,,,,
+baseline-15,gold_evidence_qa,1653,B000SARK0A,classic chai how is it?,dev:1832 | dev:1833 | dev:1834 | dev:1835 | dev:1836,"[dev:1832] it's terrific, as is the classic chai they sell also.
+
+[dev:1833] this is a good quality and tasting classic chai tea.
+
+[dev:1834] i think this chai is very good tea although i do not taste some of the classic chai flavors like black pepper and ginger, but to be fair, they are not listed on the ingredients but i was hoping that it was in the ""natural flavorings"" listed.
+
+[dev:1835] i take my tea seriously and this classic chai tastes really delicious.
+
+[dev:1836] i got the classic chai and the tea is delicious and very fragrant right out of the bag, but additionally - the amount you get for the price is absurd.","The classic chai is described as terrific, good quality, tasty, delicious, and very fragrant right out of the bag. It is also noted that the amount received for the price is excellent. However, some users do not taste flavors like black pepper and ginger, though these are not listed in the ingredients. Overall, the tea is well-received for its taste and fragrance.",,,,,,,,
+baseline-16,gold_evidence_qa,5838,B0083F9OTW,would it help with dog fighting?,dev:6545 | dev:6546,"[dev:6545] when my dog started being aggressive with my other dog, i sprayed her.
+
+[dev:6546] with a boxer in the house things got a little heated, but stop that put an end to the fighting and separation... we are a dog ""friendly"" home now.","The evidence suggests that spraying the dog helped stop the fighting. Specifically, the user states that ""stop that put an end to the fighting and separation,"" indicating that the action taken (spraying) had a positive effect on ending the aggressive behavior. Therefore, based on the evidence, it would help with dog fighting in this context.",,,,,,,,
+baseline-17,gold_evidence_qa,4470,B00DC7G0GG,why is this $75?,dev:4963 | dev:4965,"[dev:4963] is very easy to play i think is the best mario game ever, this games are very expensive but you won't regret buying it!
+
+[dev:4965] this is not hyperbole when i say that super mario 3d world may be the greatest 3d platformer ever released and easily worth the full retail price.",It is not stated why this is $75.,,,,,,,,
+baseline-18,gold_evidence_qa,1199,B000056OUX,can the net be secured around a corner with a corner banister and continue on?,,,,no_label2_evidence,,,,,,,
+baseline-19,gold_evidence_qa,1193,B00155WJ4E,can i use this belly bar to attach the maxi cosi cabrio car seat to the city mini?,dev:1263,"[dev:1263] you can't use them together because belly bar should be installed in the same place, that is used for car seat adapter Question: can i use this and also snap our infant car seat into the stroller (we use the britax b safe infant car seat with the britax adapter.","No, you cannot use the belly bar to attach the Maxi Cosi Cabrio car seat to the City Mini, because the belly bar should be installed in the same place that is used for the car seat adapter, and you cannot use them together.",,,,,,,,
+baseline-20,gold_evidence_qa,1677,B00032G1S0,is it true that dustin lance black wrote the label for tuscan whole milk?,,,,no_label2_evidence,,,,,,,
+baseline-21,gold_evidence_qa,2855,B00BMC54I8,does this table have a cardboard back to it or is it real wood?,dev:3092 | dev:3093 | dev:3094 | dev:3095 | dev:3096,"[dev:3092] back is a cardboard piece that nails on.
+
+[dev:3093] the back is actually pressboard that is almost like stiff cardboard.the main problem for me is that it looks like veneered particle board, and the veneer pattern itself looks like what you would find on cheap wood paneling, and isn't convincing as pretending to be ""wood"".
+
+[dev:3094] the back.is nailed-on cardboard so that's not too presentable Question: is the table presentable from all four sides?  the positioning in my house will expose the back side, and there are no rear shots.
+
+[dev:3095] the backing is cardboard (as is typical of furniture in this price range), but as long as you don't need the unit to be freestanding, it shouldn't be a problem.
+
+[dev:3096] not real wood but it look super nice and is extremely sturdy.","The table has a cardboard back to it. Evidence [dev:3092] states ""back is a cardboard piece that nails on,"" and [dev:3095] confirms ""the backing is cardboard (as is typical of furniture in this price range)."" Additionally, [dev:3093] describes the back as ""pressboard that is almost like stiff cardboard,"" further supporting that it is not real wood. Therefore, the back is not real wood.",,,,,,,,
+baseline-22,gold_evidence_qa,2953,B0034JU6W6,where can i purchase the pb-250?,dev:3232 | dev:3234,"[dev:3232] i found this great deal on amazon!
+
+[dev:3234] i bought this less than a year ago from amazon, as an alternative to magic bullet.",It is not stated where the PB-250 can be purchased.,,,,,,,,
+baseline-23,gold_evidence_qa,5135,B007NHS9M4,"if the bottom number is gallons, what is the top row of numbers display?",dev:5723 | dev:5726,"[dev:5723] displayed translates to about 7.56 us gallons(6.3 x 1.2), which is not an overage...
+
+[dev:5726] the display has two lines that default to display the total number of gallons.",It is not stated.,,,,,,,,
+baseline-24,gold_evidence_qa,5991,B002ERRGT0,will the grandera trim #19944 fit this valve?,dev:6652 | dev:6653,"[dev:6652] yes, this valve and trim will work together. Question: does this work with the grohe 19457en1 concetto pressure balance valve trim?
+
+[dev:6653] this will fit the following trims only (in any finish):allure 19375000arden 19311000arden 19312000concetto 19457001essence 19347000eurocube 19899000eurosmart 19458002cosmopolitian 19411000eurostyle 19411000 1998900319572002geneva 19725000kensington 1926800019268vpo19267000parkfield 19921000seabury 1970700019708000somerset 19321000talia 19264000veris 19368000 Question: can this be used for wall mount bathtub faucets?",It is not stated whether the grandera trim #19944 fits this valve.,,,,,,,,
+baseline-25,gold_evidence_qa,1187,B006QI1PCW,my baby is 70 cm and 8.5 kg it will be useful for him ?,dev:1242 | dev:1243 | dev:1245,"[dev:1242] features: extra jump allows baby to exercise legs while being entertained take with me toys provide for customizable learn and play experience 3-position height adjustment provides baby with secure learn and play environment manufacturer recommended weight/height/age limits: weight: up to 24 pounds.
+
+[dev:1243] maximum_weight_recommendation:  { unit:pounds, normalized_value:{ unit:pounds, value:25. }, value:25. }
+
+[dev:1245] the saucer can be used until the child is 30"" tall, is walking or tries to climb out. Question: what is the weight limit?","The evidence does not provide the weight limit in kilograms or specify whether the product is suitable for a baby of 70 cm and 8.5 kg. It only mentions a maximum weight recommendation of 25 pounds (from dev:1243) and does not state the corresponding weight in kilograms or provide information about height suitability beyond 30 inches. Therefore, based on the given evidence, it is not possible to determine if the product will be useful for a baby of 70 cm and 8.5 kg.",,,,,,,,
+baseline-26,gold_evidence_qa,5599,B002C0E5VG,"is this a ""san francisco"" sour dough culture or can it be used for italian bread?",dev:6242 | dev:6243 | dev:6244 | dev:6245,"[dev:6242] the starter is used to create the san francisco sourdough taste and texture of bread. Question: can i use whole wheat flour for bread making with that starter?
+
+[dev:6243] but i can tell you that this starter is the closest to true san francisco sourdough i have ever found. Question: specifically, which lactobacillus bacteria is this?
+
+[dev:6244] after feeding it one more time, i used a cup of it to make ""classic san francisco sourdough bread,"" a recipe i found online.
+
+[dev:6245] this bread is mildly sour, but it doesn't have to same tang that san francisco sour dough has.","The evidence states that the starter is ""the closest to true San Francisco sourdough I have ever found"" and is used to create the San Francisco sourdough taste and texture. However, it does not state whether this starter can be used for Italian bread. Therefore, based on the provided evidence, it is not stated whether this starter can be used for Italian bread.",,,,,,,,
+baseline-27,gold_evidence_qa,2616,B0000AQNVK,will this card stock work for hallmark card studio?,dev:2912 | dev:2913 | dev:2914 | dev:2915 | dev:2916,"[dev:2912] this is great card stock that i use with my hallmark card studio software and print on my lexmark printer.
+
+[dev:2913] i use these with hallmark card studio and they produce truly professional cards.
+
+[dev:2914] works well with my hallmark program.
+
+[dev:2915] i frequently print my own cards with hallmark card studio and these were textured nice quality cards and envelopes that i paid less for through amazon than had i bought them at the store i usually shop at.
+
+[dev:2916] have used this to make several card with the hallmark studio 2013 and the paper really makes the finished project look professional.","Yes, this card stock will work for Hallmark Card Studio. The evidence states that the user uses this card stock with Hallmark Card Studio software and that it works well with the program. Additionally, it is mentioned that the card stock produces truly professional cards when used with Hallmark Card Studio.",,,,,,,,
+baseline-28,gold_evidence_qa,6881,B005C29QN8,compatible with hp 22er?,,,,no_label2_evidence,,,,,,,
+baseline-29,gold_evidence_qa,633,B00F3KBE8O,is there a plantronics voyager legend microusb charge adapter  in the box?,dev:613 | dev:614 | dev:615,"[dev:613] here's what came in my package: 1) the headset, 2) what i believe is a medium-size earpiece (without the little foam cover), 3) a usb charging cord, 4) a usb wall charger, and, 5) a disposable plastic bag. Question: what comes withe the headset?
+
+[dev:614] there was no charger with it.
+
+[dev:615] performance of the plantronics voyager is everything i had hoped it would be, but the ""bulk"" packaging actually meant that it included nothing but the headset and charger and it was noticeably used/possibly refurbished (the piece that goes in my ear seems new, but there was scrapes on the side that showed it had been charged and used before).","It is not stated whether there is a Plantronics Voyager Legend Micro-USB charge adapter in the box. The evidence mentions a USB charging cord and a USB wall charger, but does not specify the model or whether it is a Micro-USB charge adapter. Therefore, based on the provided information, it cannot be confirmed.",,,,,,,,
+baseline-30,gold_evidence_qa,6778,B00164D5R4,does this device translate single words or only phrases?,dev:7523,[dev:7523] the only down side is that this only has translations for common phrases.,"The device only translates common phrases, not single words. Therefore, it does not translate single words.",,,,,,,,

@@ -1,0 +1,228 @@
+{
+  "preliminary": true,
+  "human_validated": false,
+  "examples": [
+    "baseline-01",
+    "baseline-02",
+    "baseline-03",
+    "baseline-04",
+    "baseline-05",
+    "baseline-06",
+    "baseline-07",
+    "baseline-08",
+    "baseline-09",
+    "baseline-10",
+    "baseline-11",
+    "baseline-12",
+    "baseline-13",
+    "baseline-14",
+    "baseline-15",
+    "baseline-16",
+    "baseline-17",
+    "baseline-18",
+    "baseline-19",
+    "baseline-20",
+    "baseline-21",
+    "baseline-22",
+    "baseline-23",
+    "baseline-24",
+    "baseline-25",
+    "baseline-26",
+    "baseline-27",
+    "baseline-28",
+    "baseline-29",
+    "baseline-30"
+  ],
+  "coverage_scope": "evidence shown to that condition; numerator and denominator use the same fact list",
+  "discarded_denominator": "14/38 and 24/38 are not used",
+  "conditions": [
+    {
+      "condition": "standard_top3",
+      "answers": 30,
+      "ucr_micro": 0.2,
+      "ucr_macro": 0.1927,
+      "ucr_defined_answers": 16,
+      "ucr_undefined_answers": 14,
+      "supported": 24,
+      "unsupported": 6,
+      "uncertain": 6,
+      "evaluation_error": 0,
+      "coverage_micro": 0.3077,
+      "coverage_macro": 0.3077,
+      "coverage_numerator": 4,
+      "coverage_denominator": 13,
+      "coverage_defined_answers": 13,
+      "coverage_undefined_answers": 17
+    },
+    {
+      "condition": "gold_evidence_qa",
+      "answers": 30,
+      "ucr_micro": 0.2812,
+      "ucr_macro": 0.2798,
+      "ucr_defined_answers": 14,
+      "ucr_undefined_answers": 16,
+      "supported": 23,
+      "unsupported": 9,
+      "uncertain": 4,
+      "evaluation_error": 0,
+      "coverage_micro": 0.6429,
+      "coverage_macro": 0.6389,
+      "coverage_numerator": 9,
+      "coverage_denominator": 14,
+      "coverage_defined_answers": 12,
+      "coverage_undefined_answers": 18
+    }
+  ],
+  "evaluator_version": "preliminary-v1",
+  "label": "preliminary automated evaluation, not human-validated ground truth",
+  "claim_status_counts": {
+    "supported": 47,
+    "unsupported": 7,
+    "contradicted": 8,
+    "uncertain": 10,
+    "evaluation_error": 0
+  },
+  "ucr_counting": {
+    "supported": "denominator only",
+    "unsupported": "numerator and denominator",
+    "contradicted": "numerator and denominator, also counted separately; included in the unsupported tally",
+    "uncertain": "excluded from primary UCR",
+    "evaluation_error": "excluded from primary UCR"
+  },
+  "decision_reasons": {
+    "passage_disagreement": 8,
+    "passage_contradiction": 8,
+    "passage_entailment": 47,
+    "no_passage_entailment": 7,
+    "low_confidence": 2
+  },
+  "fact_status_counts": {
+    "verified": 27,
+    "unsupported_by_citation": 12
+  },
+  "paired_23_count": 23,
+  "gold_not_applicable": 7,
+  "scopes": {
+    "standard_30": {
+      "answers": 30,
+      "supported": 24,
+      "unsupported": 1,
+      "contradicted": 5,
+      "uncertain": 6,
+      "evaluation_error": 0,
+      "ucr_micro": 0.2,
+      "ucr_macro": 0.1927,
+      "ucr_defined_answers": 16,
+      "ucr_undefined_answers": 14,
+      "ucr_undefined_reasons": {
+        "only_uncertain": 1,
+        "defined": 16,
+        "no_factual_claim": 13
+      },
+      "coverage_micro": 0.3077,
+      "coverage_macro": 0.3077,
+      "coverage_numerator": 4,
+      "coverage_denominator": 13,
+      "coverage_defined_answers": 13,
+      "coverage_undefined_answers": 17,
+      "coverage_undefined_reasons": {
+        "no_required_facts": 10,
+        "defined": 13,
+        "no_verified_required_facts": 7
+      }
+    },
+    "gold_23_generated": {
+      "answers": 23,
+      "supported": 23,
+      "unsupported": 6,
+      "contradicted": 3,
+      "uncertain": 4,
+      "evaluation_error": 0,
+      "ucr_micro": 0.2812,
+      "ucr_macro": 0.2798,
+      "ucr_defined_answers": 14,
+      "ucr_undefined_answers": 9,
+      "ucr_undefined_reasons": {
+        "no_factual_claim": 8,
+        "defined": 14,
+        "only_uncertain": 1
+      },
+      "coverage_micro": 0.6429,
+      "coverage_macro": 0.6389,
+      "coverage_numerator": 9,
+      "coverage_denominator": 14,
+      "coverage_defined_answers": 12,
+      "coverage_undefined_answers": 11,
+      "coverage_undefined_reasons": {
+        "no_required_facts": 7,
+        "no_verified_required_facts": 4,
+        "defined": 12
+      }
+    },
+    "paired_23_standard": {
+      "answers": 23,
+      "supported": 19,
+      "unsupported": 0,
+      "contradicted": 4,
+      "uncertain": 6,
+      "evaluation_error": 0,
+      "ucr_micro": 0.1739,
+      "ucr_macro": 0.1786,
+      "ucr_defined_answers": 14,
+      "ucr_undefined_answers": 9,
+      "ucr_undefined_reasons": {
+        "only_uncertain": 1,
+        "defined": 14,
+        "no_factual_claim": 8
+      },
+      "coverage_micro": 0.4444,
+      "coverage_macro": 0.4444,
+      "coverage_numerator": 4,
+      "coverage_denominator": 9,
+      "coverage_defined_answers": 9,
+      "coverage_undefined_answers": 14,
+      "coverage_undefined_reasons": {
+        "no_required_facts": 7,
+        "defined": 9,
+        "no_verified_required_facts": 7
+      }
+    },
+    "paired_23_gold": {
+      "answers": 23,
+      "supported": 23,
+      "unsupported": 6,
+      "contradicted": 3,
+      "uncertain": 4,
+      "evaluation_error": 0,
+      "ucr_micro": 0.2812,
+      "ucr_macro": 0.2798,
+      "ucr_defined_answers": 14,
+      "ucr_undefined_answers": 9,
+      "ucr_undefined_reasons": {
+        "no_factual_claim": 8,
+        "defined": 14,
+        "only_uncertain": 1
+      },
+      "coverage_micro": 0.6429,
+      "coverage_macro": 0.6389,
+      "coverage_numerator": 9,
+      "coverage_denominator": 14,
+      "coverage_defined_answers": 12,
+      "coverage_undefined_answers": 11,
+      "coverage_undefined_reasons": {
+        "no_required_facts": 7,
+        "no_verified_required_facts": 4,
+        "defined": 12
+      }
+    }
+  },
+  "gold_not_applicable_ids": [
+    "baseline-04",
+    "baseline-07",
+    "baseline-13",
+    "baseline-14",
+    "baseline-18",
+    "baseline-20",
+    "baseline-28"
+  ]
+}

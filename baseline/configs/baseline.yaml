@@ -1,0 +1,30 @@
+model_id: Qwen/Qwen3-4B-Instruct-2507
+# Snapshot resolved when the weights were downloaded on 2026-10-25.
+revision: cdbee75f17c01a7cc42f958dc650907174af0554
+cache_dir: models/hf
+prompt_version: evidence-only-v1
+# Official weights are bfloat16. M1 MPS loads them as float16.
+# This is a device dtype cast, not int8/int4 quantization.
+torch_dtype: float16
+device: mps
+max_input_tokens: 2048
+decoding:
+  do_sample: false
+  max_new_tokens: 256
+retriever:
+  model_id: BAAI/bge-small-en-v1.5
+  revision: 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a
+  # Official model-card instruction for short-query retrieval. Passages get no prefix.
+  query_prefix: "Represent this sentence for searching relevant passages: "
+  pooling: cls
+  normalize: true
+  similarity: inner_product
+  max_length: 512
+  top_k: 3
+  index_dir: indexes
+system_prompt: |
+  You answer a customer question about one product using only the evidence passages in the user message.
+  Use only the supplied evidence. Do not use outside knowledge.
+  Answer the parts that the evidence supports.
+  If a requested fact is not stated in the evidence, say that it is not stated.
+  Do not invent product properties, specifications, compatibility, prices, or policies.

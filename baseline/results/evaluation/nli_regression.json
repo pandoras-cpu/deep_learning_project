@@ -1,0 +1,113 @@
+{
+  "id2label": {
+    "0": "entailment",
+    "1": "neutral",
+    "2": "contradiction"
+  },
+  "baseline_01": {
+    "status": "uncertain",
+    "reason": "passage_disagreement",
+    "truncated": false,
+    "passages": [
+      {
+        "evidence_id": "dev:6972",
+        "status": "supported",
+        "nli_label": "entailment",
+        "scores": {
+          "entailment": 0.9595,
+          "neutral": 0.0394,
+          "contradiction": 0.001
+        },
+        "max_probability": 0.9595,
+        "truncated": false,
+        "token_count": 53
+      },
+      {
+        "evidence_id": "dev:6974",
+        "status": "unsupported",
+        "nli_label": "neutral",
+        "scores": {
+          "entailment": 0.1088,
+          "neutral": 0.5254,
+          "contradiction": 0.3657
+        },
+        "max_probability": 0.5254,
+        "truncated": false,
+        "token_count": 39
+      },
+      {
+        "evidence_id": "dev:6975",
+        "status": "contradicted",
+        "nli_label": "contradiction",
+        "scores": {
+          "entailment": 0.0029,
+          "neutral": 0.151,
+          "contradiction": 0.8462
+        },
+        "max_probability": 0.8462,
+        "truncated": false,
+        "token_count": 52
+      }
+    ]
+  },
+  "baseline_04_bundled_claim": {
+    "status": "unsupported",
+    "reason": "no_passage_entailment",
+    "truncated": false,
+    "passages": [
+      {
+        "evidence_id": "dev:7875",
+        "status": "unsupported",
+        "nli_label": "neutral",
+        "scores": {
+          "entailment": 0.0029,
+          "neutral": 0.9893,
+          "contradiction": 0.0077
+        },
+        "max_probability": 0.9893,
+        "truncated": false,
+        "token_count": 56
+      },
+      {
+        "evidence_id": "dev:7873",
+        "status": "unsupported",
+        "nli_label": "neutral",
+        "scores": {
+          "entailment": 0.0231,
+          "neutral": 0.9404,
+          "contradiction": 0.0365
+        },
+        "max_probability": 0.9404,
+        "truncated": false,
+        "token_count": 45
+      },
+      {
+        "evidence_id": "dev:7874",
+        "status": "unsupported",
+        "nli_label": "neutral",
+        "scores": {
+          "entailment": 0.025,
+          "neutral": 0.9668,
+          "contradiction": 0.0081
+        },
+        "max_probability": 0.9668,
+        "truncated": false,
+        "token_count": 59
+      }
+    ],
+    "if_sentence_status": "unsupported",
+    "if_sentence_scores": {
+      "entailment": 0.003,
+      "neutral": 0.9878,
+      "contradiction": 0.0092
+    },
+    "narrow_claim_status": "supported",
+    "narrow_claim_scores": {
+      "entailment": 0.9609,
+      "neutral": 0.0304,
+      "contradiction": 0.0084
+    }
+  },
+  "alignment_original_span": "measures exterior : 22|\"l x 17|\"w x 11.5|\"h interior : 18|\"l x 13|\"w x 3|\"h for pets up to 25lbs",
+  "failures": []
+}

@@ -1,0 +1,30 @@
+# Second baseline. Retriever is unchanged. The generator is Qwen2.5-3B-Instruct.
+# Old Qwen3-4B answers remain in results/baseline_dev.jsonl.
+
+model_id: Qwen/Qwen2.5-3B-Instruct
+revision: aa8e72537993ba99e69dfaafa59ed015b17504d1
+cache_dir: models/hf
+prompt_version: evidence-only-v2
+torch_dtype: float16
+device: mps
+max_input_tokens: 2048
+decoding:
+  do_sample: false
+  max_new_tokens: 256
+retriever:
+  model_id: BAAI/bge-small-en-v1.5
+  revision: 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a
+  query_prefix: "Represent this sentence for searching relevant passages: "
+  pooling: cls
+  normalize: true
+  similarity: inner_product
+  max_length: 512
+  top_k: 3
+  index_dir: indexes
+system_prompt: |
+  You answer a customer question about one product using only the evidence passages in the user message.
+  Use only the supplied evidence. Do not use outside knowledge.
+  If the question has several parts, answer every part the evidence supports.
+  For a part the evidence does not address, say that it is not stated.
+  Do not turn a missing fact into a negative answer. Absence of evidence is not evidence that the answer is no.
+  Do not invent product properties, specifications, compatibility, prices, or policies.

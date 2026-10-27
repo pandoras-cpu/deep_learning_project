@@ -1,0 +1,65 @@
+# Evaluation assignments for the Qwen2.5 generator baseline.
+# UCR and evidence-conditioned coverage keep the preliminary-v1 decision rules.
+# The model that performs each step changed, so scores are not a controlled comparison
+# with preliminary-v1.
+
+evaluator_version: baseline-eval-v2
+human_validated: false
+baseline_config: configs/baseline_v2.yaml
+sample_path: data/eval/baseline_dev_sample.json
+retrieved_input: results/baseline_dev_retrieved.jsonl
+answers: results/baseline_v2/answers.jsonl
+retrieval_metrics: results/retrieval_sanity.json
+retrieval_recomputed: false
+
+aspect_model:
+  role: question_decomposition
+  model_id: Qwen/Qwen2.5-3B-Instruct
+  revision: aa8e72537993ba99e69dfaafa59ed015b17504d1
+  cache_dir: models/hf
+  torch_dtype: float16
+  device: mps
+  load: cpu_float16_then_mps
+  prompt_version: question-aspects-v1
+  decoding:
+    do_sample: false
+    max_new_tokens: 256
+
+claim_model:
+  role: atomic_claim_extraction_and_evidence_supported_facts
+  model_id: Qwen/Qwen3-4B-Instruct-2507
+  revision: cdbee75f17c01a7cc42f958dc650907174af0554
+  cache_dir: models/hf
+  torch_dtype: float16
+  device: mps
+  load: cpu_float16_then_mps
+  same_model_judge: false
+  prompt_versions:
+    claim: claim-extraction-v2
+    facts: supported-facts-v2
+    match: fact-match-v2
+  decoding:
+    do_sample: false
+    max_new_tokens: 512
+  low_confidence_below: 0.5
+
+nli:
+  status: downloaded
+  primary_model_id: MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli
+  revision: 6f5cf0a2b59cabb106aca4c287eed12e357e90eb
+  local_dir: models/eval_nli_deberta
+  device: cpu
+  decision: argmax
+  low_confidence_below: 0.5
+  premise: supplied evidence
+  hypothesis: atomic generated claim
+  aggregation: supported only when a passage entails and no passage contradicts; disagreement is uncertain
+
+metrics:
+  ucr_micro: (unsupported + contradicted) / (supported + unsupported + contradicted)
+  uncertain_excluded: true
+  evaluation_error_excluded: true
+  undefined_when_no_classifiable_claim: true
+  coverage_micro: verified expressed facts / verified evidence-supported required facts
+  coverage_scope: evidence shown to the generator
+  coverage_undefined_when_no_verified_facts: true

@@ -1,0 +1,39 @@
+example_id,fact,standard_rag_expressed,gold_expressed
+baseline-02,A listed size gives interior dimensions and is for pets up to 25 lbs.,no,yes
+baseline-02,A reviewer says the medium size is for dogs under 20 lbs maximum.,yes,no
+baseline-03,Reviews say this Baby Bjorn product does not use or is not coated in flame retardants.,no,yes
+baseline-04,The wheels can be taken off.,yes,no
+baseline-06,Descriptions say the part fits most Whirlpool top or bottom freezer refrigerators.,no,no
+baseline-08,The mounting hardware is described as more effortless and weatherized than some other lights.,no,yes
+baseline-08,A reviewer reports a difference in light intensity versus other units.,yes,yes
+baseline-08,"The light diffuses faster than other LED floodlights, with less range than hoped.",no,yes
+baseline-08,Installation is described as no different from other fixtures: mount it to an electrical box.,no,no
+baseline-09,The heat-shrink tubing can be shrunk with a hair dryer.,yes,yes
+baseline-10,"If a refrigerator calls for part 240337103, this drawer should fit.",no,yes
+baseline-11,"The phone is unlocked and works with GSM networks, including Cricket.",yes,yes
+baseline-11,A review says it will not work with Verizon or Sprint.,no,yes
+baseline-11,"A review says it works with GSM carriers such as T-Mobile, AT&T, Telefonica, and Orange.",no,yes
+baseline-11,One Verizon user reported no problems and assumed an unlocked phone works with any provider.,no,no
+baseline-12,Cartridges are listed as 300 g (120 m) and 600 g (240 m).,no,yes
+baseline-15,"Reviewers describe the classic chai as terrific, good quality, and delicious.",yes,yes
+baseline-15,A reviewer says it is very fragrant right out of the bag.,no,yes
+baseline-15,"A reviewer does not taste black pepper or ginger, and those are not listed ingredients.",no,yes
+baseline-15,A reviewer says the amount for the price is remarkably large.,no,yes
+baseline-16,A reviewer sprayed it when one dog was aggressive toward another dog.,yes,yes
+baseline-16,A reviewer says it ended fighting and separation in a home with a boxer.,no,yes
+baseline-16,The product is described as using noise and pheromone to modify aggressive behavior.,no,no
+baseline-18,The included strings were long enough to wrap around a 4x4 corner post.,no,no
+baseline-19,The belly bar and a car-seat adapter use the same installation place and cannot be used together.,no,yes
+baseline-21,"The back is cardboard or pressboard like cardboard, not real wood.",yes,yes
+baseline-22,Reviewers found or bought this product on Amazon.,no,no
+baseline-23,The top display is described as like a car's trip odometer.,no,no
+baseline-24,"The valve is said to fit only a listed set of trims, and Grandera 19944 is not on that list.",no,no
+baseline-25,The stated maximum weight is 24 or 25 pounds.,yes,yes
+baseline-25,"The saucer can be used until the child is 30 inches tall, is walking, or tries to climb out.",no,no
+baseline-26,The starter is described as the closest to true San Francisco sourdough the reviewer has found and is used to create that taste and texture.,yes,yes
+baseline-27,Reviewers use this card stock with Hallmark Card Studio and report that it works and makes professional-looking cards.,yes,yes
+baseline-29,One received package contained a USB charging cord and a USB wall charger.,no,yes
+baseline-29,One review says the package had no charger.,no,no
+baseline-30,The device only has translations for common phrases.,yes,yes
+baseline-30,A reviewer still needs a dictionary for individual words.,yes,no
+baseline-30,"The phrase list lacks basic phrases such as ""I'm sorry"" and ""I don't speak Spanish.""",yes,no

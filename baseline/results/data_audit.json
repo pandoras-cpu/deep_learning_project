@@ -1,0 +1,621 @@
+{
+  "dataset": "ePQA",
+  "source_repo": "https://github.com/amazon-science/contextual-product-qa",
+  "repo_commit": "cec976cc2f2218aa76e562ecc9c7d79f1f3271bc",
+  "clone": "shallow",
+  "python": "3.13.5",
+  "pandas": "3.1.0",
+  "delimiter": "comma",
+  "readme_columns": [
+    "ASIN",
+    "question",
+    "qid",
+    "candidate",
+    "qa_pair_id",
+    "source",
+    "context",
+    "label",
+    "answer"
+  ],
+  "observed_columns": [
+    "qid",
+    "question",
+    "ASIN",
+    "candidate",
+    "source",
+    "qa_pair_id",
+    "title",
+    "label",
+    "answer"
+  ],
+  "context_column_present": false,
+  "label_definition_from_readme": {
+    "2": "fully answering",
+    "1": "helpful but not fully answering",
+    "0": "irrelevant"
+  },
+  "files": {
+    "train": {
+      "path": "external/contextual-product-qa/ePQA/train.csv",
+      "bytes": 37486800,
+      "sha256": "b63de9681b770573240367e919f7f04f087f6a4745ab1f79a77e6b800105ea25",
+      "columns": [
+        "qid",
+        "question",
+        "ASIN",
+        "candidate",
+        "source",
+        "qa_pair_id",
+        "title",
+        "label",
+        "answer"
+      ]
+    },
+    "dev": {
+      "path": "external/contextual-product-qa/ePQA/dev.csv",
+      "bytes": 2986475,
+      "sha256": "ec5c486592b59f2efb30abceb57c76fa55c2ff55333720a41d347cec601b024a",
+      "columns": [
+        "qid",
+        "question",
+        "ASIN",
+        "candidate",
+        "source",
+        "qa_pair_id",
+        "title",
+        "label",
+        "answer"
+      ]
+    },
+    "test": {
+      "path": "external/contextual-product-qa/ePQA/test.csv",
+      "bytes": 5871044,
+      "sha256": "a01387cf43b6c9f2e24ea32b0a06aedad29eb7c65ba4a5009fe818409cef7dab",
+      "columns": [
+        "qid",
+        "question",
+        "ASIN",
+        "candidate",
+        "source",
+        "qa_pair_id",
+        "title",
+        "label",
+        "answer"
+      ]
+    }
+  },
+  "splits": {
+    "train": {
+      "rows": 121750,
+      "unique_qid": 12175,
+      "unique_question_text": 12143,
+      "unique_ASIN": 5393,
+      "unique_qa_pair_id": 121750,
+      "duplicate_qa_pair_id_rows": 0,
+      "duplicate_full_rows": 0,
+      "questions_with_multiple_ASIN": 0,
+      "qids_with_multiple_question_texts": 0,
+      "questions_with_duplicate_candidate_text": 64,
+      "candidates_per_question": {
+        "min": 10,
+        "max": 10,
+        "histogram": {
+          "10": 12175
+        }
+      },
+      "candidates_per_ASIN": {
+        "min": 10,
+        "median": 20.0,
+        "max": 60
+      },
+      "titles_per_ASIN_max": 1,
+      "asins_with_multiple_titles": 0,
+      "label_counts": {
+        "0": 80704,
+        "1": 18431,
+        "2": 22615
+      },
+      "answer_nonempty_by_label": {
+        "1": 18431,
+        "2": 22615
+      },
+      "answer_empty_by_label": {
+        "0": 80704
+      },
+      "question_label_patterns": {
+        "has_label_2_only": 3313,
+        "has_label_1_but_no_label_2": 2954,
+        "has_label_2_and_1": 5094,
+        "all_label_0": 814
+      },
+      "source_counts": {
+        "review": 52911,
+        "attribute": 26986,
+        "cqa": 19802,
+        "description": 14979,
+        "bullet": 7072
+      },
+      "sources_outside_main_five": {},
+      "qa_pair_id_minus_one_rows": 0,
+      "qa_pair_id_minus_one_qids": 0,
+      "empty_candidate_rows": 137,
+      "empty_candidate_by_label": {
+        "0": 137
+      },
+      "empty_candidate_by_source": {
+        "description": 137
+      },
+      "blank_field_counts": {
+        "qid": 0,
+        "question": 0,
+        "ASIN": 0,
+        "candidate": 137,
+        "source": 0,
+        "qa_pair_id": 0,
+        "title": 0,
+        "label": 0,
+        "answer": 80704
+      }
+    },
+    "dev": {
+      "rows": 9770,
+      "unique_qid": 977,
+      "unique_question_text": 977,
+      "unique_ASIN": 888,
+      "unique_qa_pair_id": 9770,
+      "duplicate_qa_pair_id_rows": 0,
+      "duplicate_full_rows": 0,
+      "questions_with_multiple_ASIN": 0,
+      "qids_with_multiple_question_texts": 0,
+      "questions_with_duplicate_candidate_text": 5,
+      "candidates_per_question": {
+        "min": 10,
+        "max": 10,
+        "histogram": {
+          "10": 977
+        }
+      },
+      "candidates_per_ASIN": {
+        "min": 10,
+        "median": 10.0,
+        "max": 30
+      },
+      "titles_per_ASIN_max": 1,
+      "asins_with_multiple_titles": 0,
+      "label_counts": {
+        "0": 6415,
+        "1": 1042,
+        "2": 2313
+      },
+      "answer_nonempty_by_label": {
+        "1": 1042,
+        "2": 2313
+      },
+      "answer_empty_by_label": {
+        "0": 6415
+      },
+      "question_label_patterns": {
+        "has_label_1_but_no_label_2": 116,
+        "has_label_2_only": 382,
+        "has_label_2_and_1": 423,
+        "all_label_0": 56
+      },
+      "source_counts": {
+        "review": 4194,
+        "attribute": 2163,
+        "cqa": 1698,
+        "description": 1153,
+        "bullet": 562
+      },
+      "sources_outside_main_five": {},
+      "qa_pair_id_minus_one_rows": 0,
+      "qa_pair_id_minus_one_qids": 0,
+      "empty_candidate_rows": 1,
+      "empty_candidate_by_label": {
+        "0": 1
+      },
+      "empty_candidate_by_source": {
+        "description": 1
+      },
+      "blank_field_counts": {
+        "qid": 0,
+        "question": 0,
+        "ASIN": 0,
+        "candidate": 1,
+        "source": 0,
+        "qa_pair_id": 0,
+        "title": 0,
+        "label": 0,
+        "answer": 6415
+      }
+    },
+    "test": {
+      "rows": 20142,
+      "unique_qid": 2000,
+      "unique_question_text": 2000,
+      "unique_ASIN": 1632,
+      "unique_qa_pair_id": 19993,
+      "duplicate_qa_pair_id_rows": 149,
+      "duplicate_full_rows": 0,
+      "questions_with_multiple_ASIN": 0,
+      "qids_with_multiple_question_texts": 0,
+      "questions_with_duplicate_candidate_text": 11,
+      "candidates_per_question": {
+        "min": 9,
+        "max": 11,
+        "histogram": {
+          "9": 3,
+          "10": 1852,
+          "11": 145
+        }
+      },
+      "candidates_per_ASIN": {
+        "min": 9,
+        "median": 10.0,
+        "max": 32
+      },
+      "titles_per_ASIN_max": 1,
+      "asins_with_multiple_titles": 0,
+      "label_counts": {
+        "0": 13505,
+        "1": 2246,
+        "2": 4391
+      },
+      "answer_nonempty_by_label": {
+        "1": 2246,
+        "2": 4391
+      },
+      "answer_empty_by_label": {
+        "0": 13505
+      },
+      "question_label_patterns": {
+        "has_label_2_and_1": 905,
+        "has_label_2_only": 776,
+        "has_label_1_but_no_label_2": 222,
+        "all_label_0": 97
+      },
+      "source_counts": {
+        "review": 8635,
+        "attribute": 4650,
+        "cqa": 3539,
+        "description": 2226,
+        "bullet": 1071,
+        "BULLET_POINT": 9,
+        "CATALOG_ITEM_DESCRIPTION": 6,
+        "price_rating": 2,
+        "PRODUCT_TITLE": 2,
+        "PRODUCT_DESCRIPTION": 2
+      },
+      "sources_outside_main_five": {
+        "BULLET_POINT": 9,
+        "CATALOG_ITEM_DESCRIPTION": 6,
+        "price_rating": 2,
+        "PRODUCT_TITLE": 2,
+        "PRODUCT_DESCRIPTION": 2
+      },
+      "qa_pair_id_minus_one_rows": 150,
+      "qa_pair_id_minus_one_qids": 30,
+      "empty_candidate_rows": 14,
+      "empty_candidate_by_label": {
+        "0": 14
+      },
+      "empty_candidate_by_source": {
+        "description": 14
+      },
+      "blank_field_counts": {
+        "qid": 0,
+        "question": 0,
+        "ASIN": 0,
+        "candidate": 14,
+        "source": 0,
+        "qa_pair_id": 0,
+        "title": 297,
+        "label": 0,
+        "answer": 13505
+      }
+    }
+  },
+  "overlap": {
+    "qid": {
+      "train_dev": 0,
+      "train_test": 0,
+      "dev_test": 0,
+      "all_three": 0
+    },
+    "question_text": {
+      "train_dev": 5,
+      "train_test": 7,
+      "dev_test": 0,
+      "all_three": 0
+    },
+    "ASIN": {
+      "train_dev": 743,
+      "train_test": 1368,
+      "dev_test": 324,
+      "all_three": 219
+    },
+    "qa_pair_id": {
+      "train_dev": 0,
+      "train_test": 0,
+      "dev_test": 0,
+      "all_three": 0
+    },
+    "candidate_text": {
+      "train_dev": 1134,
+      "train_test": 1830,
+      "dev_test": 503,
+      "all_three": 335
+    },
+    "shared_question_texts": {
+      "train_dev": [
+        {
+          "question": "can this be used outdoors?",
+          "train": [
+            {
+              "qid": "13948",
+              "ASIN": "B01H74VKZU"
+            }
+          ],
+          "dev": [
+            {
+              "qid": "2635",
+              "ASIN": "B003673GBY"
+            }
+          ],
+          "same_qid": false,
+          "same_ASIN": false
+        },
+        {
+          "question": "does this product work?",
+          "train": [
+            {
+              "qid": "14177",
+              "ASIN": "B0000003H4"
+            }
+          ],
+          "dev": [
+            {
+              "qid": "3312",
+              "ASIN": "B003V3RVWI"
+            }
+          ],
+          "same_qid": false,
+          "same_ASIN": false
+        },
+        {
+          "question": "how much does it weigh?",
+          "train": [
+            {
+              "qid": "13179",
+              "ASIN": "B01AHBBG04"
+            }
+          ],
+          "dev": [
+            {
+              "qid": "146",
+              "ASIN": "B00EHL6TJY"
+            }
+          ],
+          "same_qid": false,
+          "same_ASIN": false
+        },
+        {
+          "question": "how much weight can it hold?",
+          "train": [
+            {
+              "qid": "13792",
+              "ASIN": "B06ZZCS835"
+            }
+          ],
+          "dev": [
+            {
+              "qid": "5691",
+              "ASIN": "B00339EAVK"
+            }
+          ],
+          "same_qid": false,
+          "same_ASIN": false
+        },
+        {
+          "question": "what is the return policy?",
+          "train": [
+            {
+              "qid": "14713",
+              "ASIN": "B0771HVFJQ"
+            }
+          ],
+          "dev": [
+            {
+              "qid": "5423",
+              "ASIN": "B004GYOKBG"
+            }
+          ],
+          "same_qid": false,
+          "same_ASIN": false
+        }
+      ],
+      "train_test": [
+        {
+          "question": "country of origin?",
+          "train": [
+            {
+              "qid": "14017",
+              "ASIN": "B0081SRYUW"
+            }
+          ],
+          "test": [
+            {
+              "qid": "1553",
+              "ASIN": "B002UGVWA4"
+            }
+          ],
+          "same_qid": false,
+          "same_ASIN": false
+        },
+        {
+          "question": "how many ounces does it hold?",
+          "train": [
+            {
+              "qid": "12863",
+              "ASIN": "B000BQPW6A"
+            }
+          ],
+          "test": [
+            {
+              "qid": "7959",
+              "ASIN": "B00EDTYT8I"
+            }
+          ],
+          "same_qid": false,
+          "same_ASIN": false
+        },
+        {
+          "question": "is it in english?",
+          "train": [
+            {
+              "qid": "14678",
+              "ASIN": "B00LWRSJB2"
+            }
+          ],
+          "test": [
+            {
+              "qid": "4223",
+              "ASIN": "B00I5LMSBK"
+            }
+          ],
+          "same_qid": false,
+          "same_ASIN": false
+        },
+        {
+          "question": "what are the dimensions?",
+          "train": [
+            {
+              "qid": "14033",
+              "ASIN": "B07S1CPSM2"
+            }
+          ],
+          "test": [
+            {
+              "qid": "1198",
+              "ASIN": "B000056OUX"
+            }
+          ],
+          "same_qid": false,
+          "same_ASIN": false
+        },
+        {
+          "question": "what is it made of?",
+          "train": [
+            {
+              "qid": "13835",
+              "ASIN": "B001B7RRUW"
+            }
+          ],
+          "test": [
+            {
+              "qid": "139",
+              "ASIN": "B00GIR6PBM"
+            }
+          ],
+          "same_qid": false,
+          "same_ASIN": false
+        },
+        {
+          "question": "what is the size?",
+          "train": [
+            {
+              "qid": "12698",
+              "ASIN": "B06W9JP143"
+            }
+          ],
+          "test": [
+            {
+              "qid": "2775",
+              "ASIN": "B000UQPONM"
+            }
+          ],
+          "same_qid": false,
+          "same_ASIN": false
+        },
+        {
+          "question": "what size are they?",
+          "train": [
+            {
+              "qid": "13471",
+              "ASIN": "B081C9YDWR"
+            }
+          ],
+          "test": [
+            {
+              "qid": "5972",
+              "ASIN": "B003E39IG2"
+            }
+          ],
+          "same_qid": false,
+          "same_ASIN": false
+        }
+      ],
+      "dev_test": []
+    }
+  },
+  "dev_samples_truncated": [
+    {
+      "qid": "18",
+      "qid_chars": 2,
+      "question": "my frigidaire model # is frs20qrb.  \"not found\" on pop-up list.  will this one fit?",
+      "question_chars": 83,
+      "ASIN": "B00545ATZW",
+      "ASIN_chars": 10,
+      "candidate": "if you order the correct # it should fit. Question: the color in the details is listed as white while the picture is clear.  also, the dimensions show as 0x0x0.  can you help me wi...",
+      "candidate_chars": 195,
+      "source": "cqa",
+      "source_chars": 3,
+      "qa_pair_id": "140",
+      "qa_pair_id_chars": 3,
+      "title": "Frigidaire 240337103 Crisper Pan for Refrigerator",
+      "title_chars": 49,
+      "label": "1",
+      "label_chars": 1,
+      "answer": "I'm not sure but it will fit if you order the correct #.",
+      "answer_chars": 56
+    },
+    {
+      "qid": "18",
+      "qid_chars": 2,
+      "question": "my frigidaire model # is frs20qrb.  \"not found\" on pop-up list.  will this one fit?",
+      "question_chars": 83,
+      "ASIN": "B00545ATZW",
+      "ASIN_chars": 10,
+      "candidate": "if your frig calls for the 240337103 crisper drawer, then this drawer should fit correctly. Question: i have a kenmore refrigerator, looking for 2 drawers, part #240337103 - will t...",
+      "candidate_chars": 188,
+      "source": "cqa",
+      "source_chars": 3,
+      "qa_pair_id": "141",
+      "qa_pair_id_chars": 3,
+      "title": "Frigidaire 240337103 Crisper Pan for Refrigerator",
+      "title_chars": 49,
+      "label": "2",
+      "label_chars": 1,
+      "answer": "The drawer will fit if your frig calls for the 240337103 crisper drawer.",
+      "answer_chars": 72
+    }
+  ],
+  "corpus_decision": {
+    "task": "question-specific candidate ranking",
+    "open_corpus_product_retrieval": false,
+    "reason": "Each qid has one ASIN and a preassembled pool of about 10 candidates. The released files do not contain a product-page corpus independent of these pools.",
+    "summary_zh": "Baseline 是问题级候选排序：给定一个问题和它自带的约 10 条候选，检索其中的证据再生成答案。这不是产品页开放语料检索。",
+    "query_id": "qid",
+    "evidence_id": "split:file_line",
+    "evidence_id_note": "file_line is the 1-based line number in the official CSV, including the header. qa_pair_id is unique in train and dev and does not overlap across splits, but 150 test rows share qa_pair_id -1, so qa_pair_id is not an evidence ID.",
+    "product_id": "ASIN",
+    "retrieval_text": "candidate",
+    "top_k": 3,
+    "top_k_reason": "Every question pool has 9 to 11 candidates, so Top-K=3 selects a proper subset.",
+    "excluded_from_model_input": [
+      "label",
+      "answer"
+    ],
+    "context_comparison_supported": false
+  }
+}

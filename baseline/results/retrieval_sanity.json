@@ -1,0 +1,242 @@
+{
+  "split": "dev",
+  "search": "within question candidate pool",
+  "top_k": 3,
+  "n_questions": 977,
+  "index_meta": {
+    "split": "dev",
+    "model_id": "BAAI/bge-small-en-v1.5",
+    "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "query_prefix": "Represent this sentence for searching relevant passages: ",
+    "passage_prefix": "",
+    "pooling": "cls",
+    "normalize": true,
+    "similarity": "inner_product",
+    "max_length": 512,
+    "device": "mps",
+    "rows_in_csv": 9770,
+    "empty_candidates_excluded": 1,
+    "vectors": 9769,
+    "embedding_dim": 384,
+    "passages_truncated_at_max_length": 2,
+    "tokenizer_class": "BertTokenizer",
+    "do_lower_case": true,
+    "source_csv_sha256": "ec5c486592b59f2efb30abceb57c76fa55c2ff55333720a41d347cec601b024a",
+    "labels_in_index": false
+  },
+  "relevance_definitions": {
+    "full": "label == 2",
+    "helpful_or_full": "label in {1, 2}",
+    "ndcg_gain": "2^label - 1, labels 0/1/2"
+  },
+  "recall_at_3_label2": {
+    "mean": 0.6372670807453417,
+    "n_defined": 805,
+    "n_undefined": 172
+  },
+  "success_at_3_label2": {
+    "mean": 0.9093167701863354,
+    "n_defined": 805,
+    "n_undefined": 172
+  },
+  "mrr_label2": {
+    "mean": 0.7857946366952577,
+    "n_defined": 805,
+    "n_undefined": 172
+  },
+  "recall_at_3_label1or2": {
+    "mean": 0.6107672819399204,
+    "n_defined": 921,
+    "n_undefined": 56
+  },
+  "mrr_label1or2": {
+    "mean": 0.8649720800372266,
+    "n_defined": 921,
+    "n_undefined": 56
+  },
+  "ndcg_at_3_graded": {
+    "mean": 0.731040154380076,
+    "n_defined": 921,
+    "n_undefined": 56
+  },
+  "unrestricted_search_is_not_baseline": {
+    "qid": "36",
+    "question": "does the latch come in white?",
+    "restricted_evidence_ids": [
+      "dev:25",
+      "dev:23",
+      "dev:22"
+    ],
+    "unrestricted_hits": [
+      {
+        "evidence_id": "dev:25",
+        "qid": "36",
+        "score": 0.7639
+      },
+      {
+        "evidence_id": "dev:3591",
+        "qid": "3243",
+        "score": 0.6821
+      },
+      {
+        "evidence_id": "dev:9544",
+        "qid": "8588",
+        "score": 0.6749
+      }
+    ]
+  },
+  "inspections": [
+    {
+      "qid": "18",
+      "ranked_labels": [
+        "1",
+        "1",
+        "0",
+        "2",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "top": [
+        {
+          "evidence_id": "dev:6",
+          "score": 0.8358,
+          "label_not_used_in_ranking": "1",
+          "source": "cqa",
+          "text": "i am assuming it will fit. Question: my frigidare model # is frt18is6jbo, will part # 240337103 fit it?"
+        },
+        {
+          "evidence_id": "dev:4",
+          "score": 0.8135,
+          "label_not_used_in_ranking": "1",
+          "source": "cqa",
+          "text": "im not sure but i believe you can go on google and ask this same question and they will tell you what models that piece fits on Question: will this fit in a frigidaire model #frt18"
+        },
+        {
+          "evidence_id": "dev:5",
+          "score": 0.7022,
+          "label_not_used_in_ranking": "0",
+          "source": "cqa",
+          "text": "frigidaire oem part #240337103 yes this crisper drawer matches your model Question: will this fit kenmore refrigerator 25367889506?"
+        }
+      ]
+    },
+    {
+      "qid": "31",
+      "ranked_labels": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "top": [
+        {
+          "evidence_id": "dev:15",
+          "score": 0.6642,
+          "label_not_used_in_ranking": "0",
+          "source": "cqa",
+          "text": "the im3 kit also includes the water valve, water lines and ice tray.check the freezer but you should have a plug in the side to plug the icemaker into Question: my fridge call for "
+        },
+        {
+          "evidence_id": "dev:13",
+          "score": 0.6609,
+          "label_not_used_in_ranking": "0",
+          "source": "cqa",
+          "text": "i am not really sure but if the old ice maker hangs on the left side of the freezer on two bolts that are roughly 5 inches apart it probably would work. Question: i have a ge fridg"
+        },
+        {
+          "evidence_id": "dev:21",
+          "score": 0.6531,
+          "label_not_used_in_ranking": "0",
+          "source": "cqa",
+          "text": "yes, this will work on your model Question: will this replace a model tbx22ma icemaker?"
+        }
+      ]
+    },
+    {
+      "qid": "36",
+      "ranked_labels": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "top": [
+        {
+          "evidence_id": "dev:25",
+          "score": 0.7639,
+          "label_not_used_in_ranking": "2",
+          "source": "review",
+          "text": "the visible handle part of the latch is black on this unit, but the white version doesn't seem to be available anymore."
+        },
+        {
+          "evidence_id": "dev:23",
+          "score": 0.6433,
+          "label_not_used_in_ranking": "2",
+          "source": "description",
+          "text": "the door latch is only available in black (the white and biscuit colors have been discontinued)."
+        },
+        {
+          "evidence_id": "dev:22",
+          "score": 0.6022,
+          "label_not_used_in_ranking": "2",
+          "source": "attribute",
+          "text": "color:  { value:\"white\" }"
+        }
+      ]
+    },
+    {
+      "qid": "62",
+      "ranked_labels": [
+        "0",
+        "2",
+        "2",
+        "2",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "top": [
+        {
+          "evidence_id": "dev:44",
+          "score": 0.6929,
+          "label_not_used_in_ranking": "0",
+          "source": "cqa",
+          "text": "the ice is around 30 degrees so need to put it in a freezer pretty fast or it will melt.live in south texas so... Question: does it make nugget ice ( sonic ice )?"
+        },
+        {
+          "evidence_id": "dev:45",
+          "score": 0.658,
+          "label_not_used_in_ranking": "2",
+          "source": "cqa",
+          "text": "dah, it does not make ice i said. Question: mine stopped making ice.  how can i fix it?"
+        },
+        {
+          "evidence_id": "dev:43",
+          "score": 0.6339,
+          "label_not_used_in_ranking": "2",
+          "source": "review",
+          "text": "this machine would not make ice, the lights for add water and full of ice kept going on and off, it is not worth the price."
+        }
+      ]
+    }
+  ]
+}

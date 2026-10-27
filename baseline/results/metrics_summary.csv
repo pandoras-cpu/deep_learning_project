@@ -1,0 +1,15 @@
+metric,scope,value,n_defined,n_undefined,notes
+Recall@3,"dev, relevant = label 2",0.6373,805,172,Within-question candidate pool. Undefined when the question has no label 2.
+Success@3,"dev, at least one label 2 in top 3",0.9093,805,172,Within-question candidate pool.
+MRR,"dev, relevant = label 2",0.7858,805,172,"Full within-pool ranking, not only top 3."
+Recall@3,"dev, relevant = label 1 or 2",0.6108,921,56,Label 1 and label 2 are not collapsed in the label-2 metrics.
+MRR,"dev, relevant = label 1 or 2",0.8650,921,56,Full within-pool ranking.
+nDCG@3,"dev, gain = 2^label - 1",0.7310,921,56,"Graded labels 0, 1, and 2."
+standard_rag_questions,"dev sample, seed 42",30,30,0,Top-3 within the question pool. Not an open-corpus run.
+gold_evidence_qa_generated,same 30 questions,23,23,7,"Not retrieval. Uses every non-empty label=2 candidate. Undefined means no label=2 evidence, so no answer was generated."
+UCR,30-question generation sample,,,,Not computed. Requires human labels of atomic claims. The human template is still blank.
+Answerable Coverage,30-question generation sample,,,,Not computed. Requires human labels of evidence-supported required facts. The human template is still blank.
+llm_judge_UCR,"30-question sample, standard RAG",0.1458,19,11,"7 unsupported / 48 factual claims. 11 answers have no factual claim, so their UCR is undefined. Judge is the assistant LLM, not Qwen and not a human."
+llm_judge_UCR,"30-question sample, gold evidence QA",0.1395,17,13,"6 unsupported / 43 factual claims. One uncertain claim is excluded. 13 answers have no factual claim, including 7 with no gold generation."
+llm_judge_Answerable_Coverage,"30-question sample, standard RAG",0.3684,22,8,"14 of 38 shared answerable facts expressed. 8 questions have no answerable fact, so coverage is undefined there."
+llm_judge_Answerable_Coverage,"30-question sample, gold evidence QA",0.6316,22,8,"24 of 38 shared answerable facts expressed. Same fact list and same 8 undefined questions as standard RAG."

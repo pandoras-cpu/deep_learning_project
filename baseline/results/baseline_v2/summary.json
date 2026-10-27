@@ -1,0 +1,55 @@
+{
+  "condition": "standard_rag",
+  "answers": 30,
+  "ucr_micro": 0.4688,
+  "ucr_macro": 0.4375,
+  "ucr_defined_answers": 20,
+  "ucr_undefined_answers": 10,
+  "supported": 17,
+  "unsupported": 15,
+  "uncertain": 2,
+  "evaluation_error": 0,
+  "coverage_micro": 0.28,
+  "coverage_macro": 0.2111,
+  "coverage_numerator": 7,
+  "coverage_denominator": 25,
+  "coverage_defined_answers": 15,
+  "coverage_undefined_answers": 15,
+  "evaluator_version": "baseline-eval-v2",
+  "human_validated": false,
+  "ucr_contradicted": 9,
+  "ucr_neutral_only": 6,
+  "ucr_numerator": 15,
+  "ucr_denominator": 32,
+  "note": "unsupported in ucr_numerator includes contradicted. neutral_only is unsupported minus contradicted.",
+  "claim_status_counts": {
+    "contradicted": 9,
+    "not_a_factual_claim": 17,
+    "unsupported": 6,
+    "supported": 17,
+    "uncertain": 2
+  },
+  "fact_status_counts": {
+    "verified": 25,
+    "unsupported_by_citation": 2
+  },
+  "retrieval_recomputed": false,
+  "retrieval_metrics_path": "results/retrieval_sanity.json",
+  "ucr_undefined_reasons": {
+    "no_factual_claim": 9,
+    "only_uncertain": 1
+  },
+  "coverage_undefined_reasons": {
+    "no_required_facts": 15
+  },
+  "comparison_to_v1": "not_controlled",
+  "file_sha256": {
+    "configs/baseline_v2.yaml": "4fce90f45bb30d485edb128e7b471f26888279ffaa81a403afc327f81d86a1b9",
+    "configs/evaluation_v2.yaml": "fd5dfbf12230415e215c41958741a8cbae2a52c1e5ca39d5ed80cdceb17ce9f8",
+    "src/evaluation/prompts.py": "d942ca8f2ae0383eecc21e57b62a9aaf62618c522f711d46240f44e376f29dd9",
+    "src/evaluation/metrics.py": "7c18934920f5b93b7b0dd8475c4731967eb27dba60a263e89dd2d3cc4be7fcd1",
+    "src/evaluation/nli_verifier.py": "512f28a42a86d5f2b0b1b3502262dcd296309801dbc122742f75f4d49f695c92",
+    "scripts/run_baseline_v2.py": "e4487ce14c1a0c2dafb164d36788d7357461d282019581a2e9005ac01f10b9ca",
+    "scripts/run_evaluation_v2.py": "5d3a9ea1c54fdfd90ae6cfd34f0ce08c16635c912365c743b6ac2484f80cb37d"
+  }
+}

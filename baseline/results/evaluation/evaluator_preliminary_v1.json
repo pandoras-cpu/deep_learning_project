@@ -1,0 +1,93 @@
+{
+  "evaluator_version": "preliminary-v1",
+  "human_validated": false,
+  "label": "preliminary automated evaluation, not human-validated ground truth",
+  "config": "configs/evaluation_v1.yaml",
+  "file_sha256": {
+    "configs/evaluation_v1.yaml": "defe7f393e448d3ed92ee50f271c3614a927ec92ffbcfb4bf803035edb922799",
+    "src/evaluation/prompts.py": "206c3c127c481960d90bf3347875482c06fcfbacac171fd2e237739b6aa39396",
+    "src/evaluation/metrics.py": "7c18934920f5b93b7b0dd8475c4731967eb27dba60a263e89dd2d3cc4be7fcd1",
+    "src/evaluation/nli_verifier.py": "512f28a42a86d5f2b0b1b3502262dcd296309801dbc122742f75f4d49f695c92",
+    "src/evaluation/span_align.py": "6da924043e57a65cd0bb62a1121806f3078136cf90fc281c5fdd46c0f1493f6a",
+    "src/evaluation/qwen_judge.py": "b3340b40d897a66287dae4524d1d5642c8a99f8360ffc3054f3a68f7b124946a",
+    "src/evaluation/schema.py": "292b62f48be6fc198778c67e0aa9de4d7f741d2bba6db51192ff2a866f828592"
+  },
+  "judge": {
+    "status": "configured",
+    "provider": "local_transformers",
+    "model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "cache_dir": "models/hf",
+    "same_model_judge": false,
+    "same_family_as_generator": true,
+    "torch_dtype": "float16",
+    "device": "mps",
+    "load": "cpu_float16_then_mps",
+    "temperature": 0,
+    "low_confidence_below": 0.5,
+    "decoding": {
+      "do_sample": false,
+      "max_new_tokens": 512
+    },
+    "prompt_versions": {
+      "claim": "claim-extraction-v2",
+      "facts": "supported-facts-v2",
+      "match": "fact-match-v2"
+    },
+    "nli_aggregation": "supported only when a passage entails and no passage contradicts; disagreement is uncertain",
+    "sufficiency": "not_enabled",
+    "pilot_example_ids": [
+      "baseline-01",
+      "baseline-02",
+      "baseline-03",
+      "baseline-04",
+      "baseline-05"
+    ]
+  },
+  "nli": {
+    "status": "downloaded",
+    "primary_model_id": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
+    "revision": "6f5cf0a2b59cabb106aca4c287eed12e357e90eb",
+    "local_dir": "models/eval_nli_deberta",
+    "device": "cpu",
+    "decision": "argmax",
+    "low_confidence_below": 0.5,
+    "premise": "supplied evidence",
+    "hypothesis": "atomic generated claim",
+    "role": "pragmatic NLI substitute, not AGREE TRUE-NLI"
+  },
+  "metrics": {
+    "ucr_primary": "unsupported / (supported + unsupported)",
+    "ucr_scopes": [
+      "micro",
+      "macro"
+    ],
+    "ucr_undefined_when": "answer has no confidently classified factual claim",
+    "uncertain_reported_separately": true,
+    "conservative_ucr": "uncertain factual claims counted as unsupported",
+    "coverage_evidence_conditional": "facts supported by the evidence actually shown to that condition",
+    "coverage_common_reference": "one fact list per question from all nonempty label=2 evidence",
+    "coverage_undefined_when": "the chosen fact list is empty",
+    "retrieval_existing": [
+      "Recall@K",
+      "Success@K",
+      "MRR",
+      "nDCG@K"
+    ],
+    "retrieval_k_planned": [
+      1,
+      3,
+      5
+    ],
+    "ndcg_gain": "2^label - 1",
+    "preliminary_38_fact_denominator": "do_not_reuse"
+  },
+  "ucr_counting": {
+    "supported": "excluded from the numerator, included in the denominator",
+    "unsupported": "included in the numerator and the denominator",
+    "contradicted": "subtype of unsupported: included in the numerator and the denominator, also counted separately",
+    "uncertain": "excluded from primary UCR; included as unsupported in ucr_conservative",
+    "evaluation_error": "excluded from primary UCR and from ucr_conservative",
+    "no_factual_claim": "UCR undefined, not zero"
+  }
+}

@@ -1,0 +1,130 @@
+example_id,condition,claim,label,no_generation
+baseline-01,standard_rag,You can custom crop by putting on multiple photos and cropping them to different shapes.,unsupported,False
+baseline-01,standard_rag,This is supported by the evidence provided.,not_a_factual_claim,False
+baseline-02,standard_rag,The medium size is for small dogs under 20 lbs max.,supported,False
+baseline-02,standard_rag,A 25 lb dog exceeds that 20 lb limit.,supported,False
+baseline-02,standard_rag,The medium size would not be big enough.,supported,False
+baseline-02,standard_rag,You should order the large size.,unsupported,False
+baseline-03,standard_rag,A reviewer was concerned about fire retardants in polyurethane foam and replaced it with organic latex.,supported,False
+baseline-03,standard_rag,Whether this item uses flame retardants is not stated.,not_a_factual_claim,False
+baseline-04,standard_rag,The wheels can be removed after receipt.,supported,False
+baseline-04,standard_rag,The casters come mounted on the cross bars.,supported,False
+baseline-04,standard_rag,Releasing the screw mechanism may take a small tap.,supported,False
+baseline-04,standard_rag,That tap removes the wheels with a simple action.,unsupported,False
+baseline-05,standard_rag,It holds larger items between the net and the closed tailgate.,supported,False
+baseline-05,standard_rag,It is spacious.,supported,False
+baseline-05,standard_rag,It secures firmly.,supported,False
+baseline-05,standard_rag,Whether it holds golf clubs in a 2017 Tacoma is not stated.,not_a_factual_claim,False
+baseline-06,standard_rag,Fit for Whirlpool model ED5VHGXMB10 is not stated.,not_a_factual_claim,False
+baseline-06,standard_rag,Whether it comes assembled is not stated.,not_a_factual_claim,False
+baseline-07,standard_rag,Music preference is not stated.,not_a_factual_claim,False
+baseline-08,standard_rag,The 2-fixture unit is different from the 3-fixture unit.,supported,False
+baseline-08,standard_rag,There is a difference in light intensity versus other installed units.,supported,False
+baseline-08,standard_rag,Differences from other similar products are not stated.,not_a_factual_claim,False
+baseline-09,standard_rag,A hair dryer can be used if you do not have a heat gun.,supported,False
+baseline-09,standard_rag,The tubing shrinks when heated with a hair dryer or something similar.,supported,False
+baseline-10,standard_rag,Whether part 240337103 fits Frigidaire FRS20QRB is not stated.,not_a_factual_claim,False
+baseline-11,standard_rag,"The phone works with any GSM network, including Cricket.",supported,False
+baseline-11,standard_rag,It is compatible with the reviewer's local phone service.,supported,False
+baseline-11,standard_rag,It is compatible with national phone service.,unsupported,False
+baseline-11,standard_rag,Compatibility with Verizon Wireless is not stated.,not_a_factual_claim,False
+baseline-12,standard_rag,The cubic-meter quantity is not stated.,not_a_factual_claim,False
+baseline-13,standard_rag,Multiple cameras cannot be connected to the same IP address.,unsupported,False
+baseline-13,standard_rag,More than one camera requires more ports for their addresses.,supported,False
+baseline-13,standard_rag,A user chose dynamic IP after a camera and printer received the same address.,supported,False
+baseline-13,standard_rag,Each camera should have a distinct IP address.,unsupported,False
+baseline-14,standard_rag,How many tablespoons of broccoli sprout seeds fill one tray is not stated.,not_a_factual_claim,False
+baseline-15,standard_rag,Classic chai is described as good quality and delicious.,supported,False
+baseline-15,standard_rag,It is described as terrific.,supported,False
+baseline-15,standard_rag,It tastes really delicious.,supported,False
+baseline-16,standard_rag,A trainer used it at PetSmart to curb barking.,supported,False
+baseline-16,standard_rag,A user sprayed it when one dog was aggressive toward another dog.,supported,False
+baseline-16,standard_rag,Whether it would help with dog fighting is not stated.,not_a_factual_claim,False
+baseline-17,standard_rag,Why this costs $75 is not stated.,not_a_factual_claim,False
+baseline-18,standard_rag,Whether the net can continue around a corner banister is not stated.,not_a_factual_claim,False
+baseline-19,standard_rag,A review says the bar can be used as a car-seat adapter or holder.,supported,False
+baseline-19,standard_rag,Another passage discusses a Britax car-seat adapter.,supported,False
+baseline-19,standard_rag,Use with the Maxi Cosi Cabrio on the City Mini is not stated.,not_a_factual_claim,False
+baseline-20,standard_rag,Whether Dustin Lance Black wrote the Tuscan whole-milk label is not stated.,not_a_factual_claim,False
+baseline-21,standard_rag,The table has a cardboard back.,supported,False
+baseline-21,standard_rag,The back is pressboard almost like stiff cardboard.,supported,False
+baseline-21,standard_rag,The back is nailed-on cardboard.,supported,False
+baseline-21,standard_rag,It is not real wood.,supported,False
+baseline-22,standard_rag,Where the PB-250 can be purchased is not stated.,not_a_factual_claim,False
+baseline-23,standard_rag,The display has two lines that default to the total number of gallons.,supported,False
+baseline-23,standard_rag,What the top row shows is not stated.,not_a_factual_claim,False
+baseline-24,standard_rag,Whether Grandera trim 19944 fits this valve is not stated.,not_a_factual_claim,False
+baseline-25,standard_rag,The manufacturer recommends a maximum weight of 24 pounds.,supported,False
+baseline-25,standard_rag,The baby's converted weight is within that 24 pound limit.,supported,False
+baseline-25,standard_rag,The product may be useful because the height is within the recommended range.,unsupported,False
+baseline-25,standard_rag,Suitability for exactly 70 cm and 8.5 kg is not directly stated.,not_a_factual_claim,False
+baseline-26,standard_rag,The starter is the closest to true San Francisco sourdough the reviewer has found.,supported,False
+baseline-26,standard_rag,Bread made with it is mildly sour.,supported,False
+baseline-26,standard_rag,The specific lactobacillus is not stated.,not_a_factual_claim,False
+baseline-26,standard_rag,Whether it can be used for Italian bread is not stated.,not_a_factual_claim,False
+baseline-27,standard_rag,This card stock works with Hallmark Card Studio.,supported,False
+baseline-27,standard_rag,A user reports professional results with that program.,supported,False
+baseline-28,standard_rag,Compatibility with the HP 22er is not stated.,not_a_factual_claim,False
+baseline-29,standard_rag,The received package included a Plantronics magnetic USB cable and a Kyocera AC adapter.,supported,False
+baseline-29,standard_rag,A Plantronics Voyager Legend microUSB charge adapter in the box is not stated.,not_a_factual_claim,False
+baseline-30,standard_rag,The device only translates common phrases.,supported,False
+baseline-30,standard_rag,It does not translate single words.,supported,False
+baseline-30,standard_rag,"It lacks basic phrases such as ""I'm sorry"" and ""I don't speak Spanish.""",supported,False
+baseline-30,standard_rag,Users need a dictionary for individual words.,supported,False
+baseline-01,gold_evidence_qa,It is not stated how to custom crop.,not_a_factual_claim,False
+baseline-02,gold_evidence_qa,The measured size is identified as the medium size.,unsupported,False
+baseline-02,gold_evidence_qa,The interior dimensions are 18 x 13 x 3 inches.,supported,False
+baseline-02,gold_evidence_qa,It is for pets up to 25 lbs.,supported,False
+baseline-02,gold_evidence_qa,A 25 lb dog is within that limit.,supported,False
+baseline-02,gold_evidence_qa,The medium size would be big enough.,unsupported,False
+baseline-02,gold_evidence_qa,You should order the medium size.,unsupported,False
+baseline-03,gold_evidence_qa,The item does not use flame retardants.,supported,False
+baseline-05,gold_evidence_qa,"It can hold groceries, tools, and small items.",supported,False
+baseline-05,gold_evidence_qa,It can hold a full load.,supported,False
+baseline-05,gold_evidence_qa,Whether it holds golf clubs in a 2017 Tacoma is not stated.,not_a_factual_claim,False
+baseline-06,gold_evidence_qa,Fit for that exact Whirlpool model is not stated.,not_a_factual_claim,False
+baseline-06,gold_evidence_qa,Whether it comes assembled is not stated.,not_a_factual_claim,False
+baseline-08,gold_evidence_qa,The mounting hardware is more effortless and weatherized.,supported,False
+baseline-08,gold_evidence_qa,The light diffuses faster than other LED floodlights and the range is less than expected.,supported,False
+baseline-08,gold_evidence_qa,There is a difference in light intensity versus other installed units.,supported,False
+baseline-08,gold_evidence_qa,"The evidence does not say whether those differences come from the product, installation, or the environment.",unsupported,False
+baseline-09,gold_evidence_qa,A hair dryer can be used if you do not have a heat gun.,supported,False
+baseline-09,gold_evidence_qa,The tubing shrinks very easily with a hair dryer or a heat gun.,supported,False
+baseline-10,gold_evidence_qa,"If a refrigerator calls for part 240337103, this drawer should fit.",supported,False
+baseline-10,gold_evidence_qa,Whether it fits Frigidaire FRS20QRB specifically is not stated.,not_a_factual_claim,False
+baseline-11,gold_evidence_qa,"It works with GSM carriers worldwide and in South America, including T-Mobile, AT&T, Telefonica, and Orange.",supported,False
+baseline-11,gold_evidence_qa,It does not work with Verizon or Sprint.,supported,False
+baseline-11,gold_evidence_qa,"It works with GSM networks, including Cricket.",supported,False
+baseline-11,gold_evidence_qa,It works with AT&T and T-Mobile MMS and internet service.,unsupported,False
+baseline-11,gold_evidence_qa,The phone is unlocked.,supported,False
+baseline-11,gold_evidence_qa,The phone is not branded by Sprint or Verizon.,unsupported,False
+baseline-12,gold_evidence_qa,Cartridges come in 300 g (120 m) and 600 g (240 m).,supported,False
+baseline-12,gold_evidence_qa,The cubic-meter quantity is not stated.,not_a_factual_claim,False
+baseline-15,gold_evidence_qa,"It is terrific, good quality, tasty, delicious, and fragrant.",supported,False
+baseline-15,gold_evidence_qa,The amount for the price is excellent.,supported,False
+baseline-15,gold_evidence_qa,Some users do not taste black pepper and ginger.,supported,False
+baseline-15,gold_evidence_qa,Black pepper and ginger are not listed ingredients.,supported,False
+baseline-16,gold_evidence_qa,Spraying the dog ended the fighting.,supported,False
+baseline-16,gold_evidence_qa,The quoted review says it ended the fighting and separation.,supported,False
+baseline-16,gold_evidence_qa,It would help with dog fighting.,supported,False
+baseline-17,gold_evidence_qa,Why this costs $75 is not stated.,not_a_factual_claim,False
+baseline-19,gold_evidence_qa,The belly bar and a car-seat adapter cannot be used together because they install in the same place.,supported,False
+baseline-19,gold_evidence_qa,That prohibition applies specifically to the Maxi Cosi Cabrio on the City Mini.,uncertain,False
+baseline-21,gold_evidence_qa,The back is a cardboard piece that nails on.,supported,False
+baseline-21,gold_evidence_qa,The backing is cardboard.,supported,False
+baseline-21,gold_evidence_qa,The back is pressboard almost like stiff cardboard.,supported,False
+baseline-21,gold_evidence_qa,The back is not real wood.,supported,False
+baseline-22,gold_evidence_qa,Where the PB-250 can be purchased is not stated.,not_a_factual_claim,False
+baseline-23,gold_evidence_qa,What the top row shows is not stated.,not_a_factual_claim,False
+baseline-24,gold_evidence_qa,Whether Grandera trim 19944 fits this valve is not stated.,not_a_factual_claim,False
+baseline-25,gold_evidence_qa,The maximum weight recommendation is 25 pounds.,supported,False
+baseline-25,gold_evidence_qa,"Usefulness for a 70 cm, 8.5 kg baby cannot be determined.",not_a_factual_claim,False
+baseline-26,gold_evidence_qa,The starter is the closest to true San Francisco sourdough the reviewer has found.,supported,False
+baseline-26,gold_evidence_qa,It is used to create San Francisco sourdough taste and texture.,supported,False
+baseline-26,gold_evidence_qa,Whether it can be used for Italian bread is not stated.,not_a_factual_claim,False
+baseline-27,gold_evidence_qa,This card stock works with Hallmark Card Studio.,supported,False
+baseline-27,gold_evidence_qa,It produces professional-looking cards with that program.,supported,False
+baseline-29,gold_evidence_qa,The package included a USB charging cord and a USB wall charger.,supported,False
+baseline-29,gold_evidence_qa,Whether that charger is the named microUSB adapter is not stated.,not_a_factual_claim,False
+baseline-30,gold_evidence_qa,The device only translates common phrases.,supported,False
+baseline-30,gold_evidence_qa,It does not translate single words.,supported,False
